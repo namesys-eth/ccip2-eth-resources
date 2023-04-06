@@ -1,59 +1,51 @@
----
+# ENSIP-15: Custodial Gasless Records
 
-description:
+### Resolver with Gasless ENS Records Management using IPNS and CCIP-Read
 
-Optional specification for gasless ENS records in IPNS using CCIP-Read.
-
----
-
-
-
-# ENSIP-XX: Off-chain ENS Records Manager
-
-| **Author**    | [freetib.eth](@0xc0de4c0ffee), [sshmatrix.eth](@sshmatrix) |
-| -- |  -- |
+| &nbsp; | &nbsp; |
+| -- | -- |
+| **Author**    | [freetib.eth](@0xc0de4c0ffee), [sshmatrix.eth](@sshmatrix), [eth.limo](@eth_limo) |
 | **Status**    | Draft |
-| **Submitted** | 2023-04-XX |
+| **Submitted** | 2023-04-10 |
 
+## Abstract
 
-### Abstract
+This ENSIP introduces an optional specification for Resolvers to fetch and render ENS records with `CCIP-Read` (ENSIP-10) using IPNS and RFC-8615 `.well-known` standard. The outlined implementation doesn't need web2 gateways to relay off-chain records and relies on users to host their records themselves using IPNS, resulting in a gasless and custodial implementation. This specification is fully optional and ENS users must manually switch their Resolver address to enable the features included therein.
 
-This ENSIP introduces optional specification to store ENS /domain related/ records for ENSIP-10 based `CCIP-Read` using IPNS and RFC8615 `.well-known/` directory format. This specification is fully optional, ENS users have to manually switch their resolver address to activate this feature set.
+## Motivation
 
+ENS has the potential to revolutionise decentralised access to the web with an attached identity system through linked records, but the usage of ENS records seems to have pleatued. This is a consequence of intrinsically high gas costs associated with adding and updating the records since there are no additional fees to set records. While IPNS has reduced the gas costs associated with updating `contenthash`, other records appear to either be unset or rarely updated once set.
 
-### Motivation
+This specification solves the aforementioned problem of high gas costs by storing the ENS records off-chain inside `.well-known` (RFC8615) directory of the users' IPNS contenthash. Records stored under `.well-known` standard can then be queried through [ENSIP-10 `CCIP-Read`](https://docs.ens.domains/ens-improvement-proposals/ensip-10-wildcard-resolution) implemented in this specification. The implementation outlined here doesn't require any additional gateways to fetch and render the ENS records, and the user is fully in control of their records, e.g. hosting the records on IPFS and linking the IPFS hash to their IPNS key. With this method, users are able to update their records as often as possible at no cost whatsoever without ever losing custody of their data. We believe that this specification will enable frequent updates of records other than the `contenthash` and propel ENS adoption as an identity layer.
 
-ENS users with IPNS hash set in their resolver can update their website off-chain for zero gas fees but updating other ENS record types is usually higher than yearly fees for >4 char `.eth` names, that's really slowing down ENS adoption.
+## Specification
 
-ENSIP-10 can read off-chain `json` data from web2 servers/database or by reading ENS records from L2 in backend.
+The proposed Resolver and ENS records storage outlined in this document expects the following implementation:
 
-*idea is to integrate IPNS with IPFS/IPLD type to store ENS `records.json`  in IPFS Nodes as RFC8615 `/.well-known/eth/<domain>/<sub>/<record>.json` format. This specification strictly follows ENSIP-10 to implement gasless off-chain ENS records..
+### a) CCIP-Read Resolver (ENSIP-10)
 
+This specification is an extension of ENSIP-10 `CCIP-Read`
 
-
-### Specification
-a) CCIP resolver (ENSIP-10) :
-
-This specification is ENSIP-10 extension
-```
+```solidity
 function resolve(bytes calldata name, bytes calldata data) external view returns(bytes memory)
-``
+```
 
-1) DNS decode `_path` and full `domain` as string from `name`
+where, the `_path` to query an ENS record and the full `_domain` as string shall be decoded from encoded `name` variable using `DNSDecode()` function:
+
 ```solidity
 function DNSDecode(
     bytes calldata name
 ) public view returns (
     string memory _domain, string memory _path, string memory _label
 ){
-    uint level = 1; // domain level
+    uint level = 1; // domain heirarchy level
     uint i = 1; // counter
     uint len uint8(bytes1(name[:1])); // length of label
-    _label = string(name[1: i += len]); // final value is tld "eth"
-    _path = _label; // suffix after /.well-known/..
+    _label = string(name[1: i += len]); // final value is TLD ".eth"
+    _path = _label; // suffix after /.well-known/
     _domain = _label; // full domain as string
 
-    while(name[i] > 0x0) { // dns decode
+    while(name[i] > 0x0) { // DNS Decode
         len = uint8(bytes1(name[i: ++i]));
         _label = string(name[i: i += len]);
         _domain = string.concat(_domain, ".", _label);
@@ -63,39 +55,54 @@ function DNSDecode(
 }
 ```
 
-2) RFC8615 : `.well-known` directory format for ENS records json stored as [Reverse domain name notation](https://en.wikipedia.org/wiki/Reverse_domain_name_notation) type directory path using `/` instead of `.` as separator.
+### b) Off-chain Records Storage
 
-	Examples :
+For this specification to make pratical sense, we expect the `contenhash` to be of IPNS type. IPNS hashes are key-based decentralised storage pointers that only need to be added once to on-chain storage by the user. IPNS hashes can in turn serve as proxy and point to upgradeable IPFS or IPLD content. In the parent IPNS directory, the records must be stored in the [RFC-8615](https://www.rfc-editor.org/rfc/rfc8615) compliant `.well-known` directory format. ENS records for any name `sub.domain.eth` must then be stored in JSON format under a [Reverse Domain Name notation](https://en.wikipedia.org/wiki/Reverse_domain_name_notation) type directory path using `/` instead of `.` as separator, i.e. in format `.well-known/eth/domain/sub/<record>.json`.
 
-	- ENS text record for `vitalik.eth`'s avatar is stored in `https://vitalik.eth.limo/.well-known/eth/vitalik/avatar.json` formatted as `{ data : abi.encode(string("eip155:1/erc1155:0xb32979486938aa9694bfc898f35dbed459f44424/10063"))}`
+**1. Some Examples:**
 
-	- ETH address records for `sub.domain.eth` is stored in `https://sub.domain.eth/.well-known/eth/domain/sub/addr-60.json` formatted as `{data:abi.encode(owner_address)}`
+- ENS text record for `vitalik.eth`'s avatar is stored at `https://vitalik.eth.limo/.well-known/eth/vitalik/avatar.json` formatted as
 
-    Implementation detail : If CCIP json data is signed by owner of domain it must be prefixed with bytes4 `callback` function selector as, ```{data: bytes.concat(Resolver.___callback.selector, signed_data}```
-
-	Resolver function to json file name
-	| Type | Function | Json file |
-	| -- | -- | --- |
-	|Text Records (ENSIP-05) | `text(bytes32 node, string memory key)` | \<key>.json |
-	|Ethereum address | `addr(bytes32 node)` | addr-60.json |
-	|Multichain Address (ENSIP-9) | `addr(bytes32 node, uint coinType)`| addr-\<coinType>.json |
-	|Public Key | `pubkey(bytes32 node)`| pubkey.json |
-	|Contenthash (EIP-07) | `contenthash(bytes32 node)` | contenthash.json |
-
-
-3) CCIP Gateways :
-
-    | Type | Identifier | Gateway URL|
-    |--- | --- | --- |
-    | ipns://\<contenthash> | 0xe5 | https://`<base36-cid-v1>`.ipns.dweb.link/.well-known/..|
-    | ipfs://\<contenthash> | 0xe3 | https://`<base32-cid-v1>`.ipfs.dweb.link/.well-known/..|
-    | ENS + IPFS node| -- | https://`domain-eth`.ipns.dweb.link/.well-known/..|
-    | ENS | -- |https://`domain.eth`.limo/.well-known/..|
-    | ENS + IPFS2 resolver| 0xe3, 0xe5 |https://`<cid-v1>`.ipfs2.eth.limo/.well-known/..|
-
-
-
+```solidity
+{ data: abi.encode(string("eip155:1/erc1155:0xb32979486938aa9694bfc898f35dbed459f44424/10063")) }
 ```
+
+- ETH address record for `sub.domain.eth` is stored at `https://sub.domain.eth/.well-known/eth/domain/sub/addr-60.json` formatted as
+
+```solidity
+{ data: abi.encode(<addr-60>) }
+```
+
+Note: If the JSON data is signed by the Registrant of `domain.eth`, it must be prefixed with `bytes4` of `callback` function selector as,
+
+```solidity
+{ data: bytes.concat(Resolver.___callback.selector, <signed_data>}
+```
+
+**2. Resolver function to JSON file name**
+
+| Type | Function | JSON file |
+| -- | -- | --- |
+| Text Records ([ENSIP-05](https://docs.ens.domains/ens-improvement-proposals/ensip-5-text-records)) | `text(bytes32 node, string memory key)` | `<key>.json` |
+| Ethereum Address | `addr(bytes32 node)` | `addr-60.json` |
+| Multichain Address ([ENSIP-09](https://docs.ens.domains/ens-improvement-proposals/ensip-9-multichain-address-resolution)) | `addr(bytes32 node, uint coinType)`| `addr-<coinType>.json` |
+| Public Key | `pubkey(bytes32 node)`| `pubkey.json` |
+| Contenthash ([ENSIP-07](https://docs.ens.domains/ens-improvement-proposals/ensip-7-contenthash-field)) | `contenthash(bytes32 node)` | `contenthash.json` |
+
+
+### CCIP Gateways
+
+| Type | Identifier | Gateway URL |
+| --- | --- | --- |
+| `ipns://<contenthash>` | `0xe5` | `https://<base36-CID-v1>.ipns.dweb.link/.well-known/..` |
+| `ipfs://<contenthash>` | `0xe3` | `https://<base32-CID-v1>.ipfs.dweb.link/.well-known/..` |
+| ENS + IPNS Node| &nbsp; | `https://domain-eth.ipns.dweb.link/.well-known/..` |
+| ENS | &nbsp; | `https://domain.eth.limo/.well-known/..` |
+| ENS + IPFS2 resolver| `0xe3`, `0xe5` | `https://<CID-v1>.ipfs2.eth.limo/.well-known/..` |
+
+## Code
+
+```solidity
 	//...
 
 	funMap[iResolver.addr.selector] = "addr-60"; // eth address
@@ -126,7 +133,7 @@ function DNSDecode(
 ```
 
 
-```
+```solidity
 	function resolve(bytes calldata name, bytes calldata data) external view returns(bytes memory) {
         uint level;
         uint len;
