@@ -171,9 +171,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.28060516"
-     inkscape:cx="879.29441"
-     inkscape:cy="497.20982"
+     inkscape:zoom="0.40908698"
+     inkscape:cx="494.96956"
+     inkscape:cy="631.82239"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -363,7 +363,7 @@
    id="tspan1895"
    dy="0 -1"> oFF</tspan>-chain record</tspan><tspan
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:SPOTNIK;-inkscape-font-specification:SPOTNIK;text-align:start;text-anchor:start;stroke:#000000;stroke-width:0.32004;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           id="tspan1417"></tspan></tspan><tspan
+           id="tspan1417" /></tspan><tspan
          sodipodi:role="line"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:SPOTNIK;-inkscape-font-specification:SPOTNIK;text-align:start;text-anchor:start;fill:#0069ff;fill-opacity:1;stroke:#0069ff;stroke-width:0.32004;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          x="206.4782"
@@ -493,19 +493,24 @@
          style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20.84540000000000148px;font-family:'SF Mono';-inkscape-font-specification:'SF Mono Light';fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1">2</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:6.08604px;line-height:1.25;font-family:Palatino;-inkscape-font-specification:Palatino;font-variant-ligatures:none;text-align:center;letter-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.380377"
-       x="94.718079"
+       style="font-size:6.08604px;line-height:1.25;font-family:Palatino;-inkscape-font-specification:Palatino;font-variant-ligatures:none;text-align:center;letter-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.88;stroke-miterlimit:4;stroke-dasharray:none"
+       x="129.12059"
        y="62.5802"
        id="text1011"><tspan
          sodipodi:role="line"
          id="tspan1009"
-         x="94.718079"
+         x="129.12059"
          y="62.5802"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:SPOTNIK;-inkscape-font-specification:'SPOTNIK Bold';fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.380377;stroke-opacity:0.0282258">custodial gasless records</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:SPOTNIK;-inkscape-font-specification:'SPOTNIK Bold';text-align:end;text-anchor:end;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.88;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.0282258">off-chain ens</tspan><tspan
          sodipodi:role="line"
-         x="94.718079"
-         y="70.187752"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:SPOTNIK;-inkscape-font-specification:'SPOTNIK Bold';fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.380377;stroke-opacity:0.0282258"
+         x="129.12059"
+         y="70.383163"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:SPOTNIK;-inkscape-font-specification:'SPOTNIK Bold';text-align:end;text-anchor:end;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.88;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.0282258"
+         id="tspan996">records manager</tspan><tspan
+         sodipodi:role="line"
+         x="129.12059"
+         y="77.990715"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:SPOTNIK;-inkscape-font-specification:'SPOTNIK Bold';text-align:end;text-anchor:end;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.88;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.0282258"
          id="tspan1234" /></text>
     <text
        xml:space="preserve"
