@@ -16,7 +16,9 @@ This ENSIP introduces an optional specification for Resolvers to fetch and rende
 
 ENS has the potential to revolutionise decentralised access to the web with an attached identity system through linked records, but the usage of ENS records seems to have pleatued. This is a consequence of intrinsically high gas costs associated with adding and updating the records since there are no additional fees to set records. While IPNS has reduced the gas costs associated with updating `contenthash`, other records appear to either be unset or rarely updated once set.
 
-This specification solves the aforementioned problem of high gas costs by storing the ENS records off-chain inside `.well-known` (RFC8615) directory of the users' IPNS contenthash. Records stored under `.well-known` standard can then be queried through [ENSIP-10 `CCIP-Read`](https://docs.ens.domains/ens-improvement-proposals/ensip-10-wildcard-resolution) implemented in this specification. The implementation outlined here doesn't require any additional gateways to fetch and render the ENS records, and the user is fully in control of their records, e.g. hosting the records on IPFS and linking the IPFS hash to their IPNS key. With this method, users are able to update their records as often as possible at no cost whatsoever without ever losing custody of their data. We believe that this specification will enable frequent updates of records other than the `contenthash` and propel ENS adoption as an identity layer.
+This specification solves the aforementioned problem of high gas costs by storing the ENS records off-chain inside `.well-known` (RFC8615) directory of the users' IPNS contenthash. Records stored under `.well-known` standard can then be queried through [ENSIP-10 `CCIP-Read`](https://docs.ens.domains/ens-improvement-proposals/ensip-10-wildcard-resolution) implemented in this specification. The implementation outlined here doesn't require any additional gateways to fetch and render the ENS records, and the user is fully in control of their records, e.g. hosting the records on IPFS and linking the IPFS hash to their IPNS key. With this method, users are able to update their records as often as possible at no cost whatsoever without ever losing custody of their data (see figure below). We believe that this specification will enable frequent updates of records other than the `contenthash` and propel ENS adoption as an identity layer.
+
+![](https://raw.githubusercontent.com/namesys-eth/ccip2-resources/main/graphics/ccip2.png)
 
 ## Specification
 
@@ -57,7 +59,7 @@ function DNSDecode(
 
 ### b) Off-chain Records Storage
 
-For this specification to make pratical sense, we expect the `contenhash` to be of IPNS type. IPNS hashes are key-based decentralised storage pointers that only need to be added once to on-chain storage by the user. IPNS hashes can in turn serve as proxy and point to upgradeable IPFS or IPLD content. In the parent IPNS directory, the records must be stored in the [RFC-8615](https://www.rfc-editor.org/rfc/rfc8615) compliant `.well-known` directory format. ENS records for any name `sub.domain.eth` must then be stored in JSON format under a [Reverse Domain Name notation](https://en.wikipedia.org/wiki/Reverse_domain_name_notation) type directory path using `/` instead of `.` as separator, i.e. in format `.well-known/eth/domain/sub/<record>.json`.
+For this specification to make pratical sense, we expect the `contenhash` to be of IPNS type. IPNS hashes are key-based decentralised storage pointers that only need to be added once to on-chain storage by the user. IPNS hashes can in turn serve as proxy and point to upgradeable IPFS or IPLD content. In the parent IPNS directory, the records must be stored in the [RFC-8615](https://www.rfc-editor.org/rfc/rfc8615) compliant `.well-known` directory format. ENS records for any name `sub.domain.eth` must then be stored in JSON format under a [reverse-DNS](https://en.wikipedia.org/wiki/Reverse_domain_name_notation) type directory path using `/` instead of `.` as separator, i.e. in format `.well-known/eth/domain/sub/<record>.json`.
 
 **1. Some Examples:**
 
@@ -79,7 +81,7 @@ Note: If the JSON data is signed by the Registrant of `domain.eth`, it must be p
 { data: bytes.concat(Resolver.___callback.selector, <signed_data>}
 ```
 
-**2. Resolver function to JSON file name**
+**2. Resolver function → JSON file names:**
 
 | Type | Function | JSON file |
 | -- | -- | --- |
@@ -101,6 +103,8 @@ Note: If the JSON data is signed by the Registrant of `domain.eth`, it must be p
 | ENS + IPFS2 resolver| `0xe3`, `0xe5` | `https://<CID-v1>.ipfs2.eth.limo/.well-known/..` |
 
 ## Code
+
+### --
 
 ```solidity
 	//...
@@ -132,6 +136,7 @@ Note: If the JSON data is signed by the Registrant of `domain.eth`, it must be p
 	}
 ```
 
+### --
 
 ```solidity
 	function resolve(bytes calldata name, bytes calldata data) external view returns(bytes memory) {
