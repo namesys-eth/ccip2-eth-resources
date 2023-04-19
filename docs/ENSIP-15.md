@@ -18,7 +18,7 @@ ENS has the potential to revolutionise decentralised access to the web with an a
 
 This specification solves the aforementioned problem of high gas costs by storing the ENS records off-chain inside `.well-known` (RFC8615) directory of the users' IPNS contenthash. Records stored under `.well-known` standard can then be queried through [ENSIP-10 `CCIP-Read`](https://docs.ens.domains/ens-improvement-proposals/ensip-10-wildcard-resolution) implemented in this specification. The implementation outlined here doesn't require any additional gateways to fetch and render the ENS records, and the user is fully in control of their records, e.g. hosting the records on IPFS and linking the IPFS hash to their IPNS key. With this method, users are able to update their records as often as possible at no cost whatsoever without ever losing custody of their data (see figure below). We believe that this specification will enable frequent updates of records other than the `contenthash` and propel ENS adoption as an identity layer.
 
-![](https://raw.githubusercontent.com/namesys-eth/ccip2-resources/main/graphics/ccip2.png)
+![](https://raw.githubusercontent.com/namesys-eth/ccip2-resources/main/graphics/png/ccip2.png)
 
 ## Specification
 
