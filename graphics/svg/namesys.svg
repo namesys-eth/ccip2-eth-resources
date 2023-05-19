@@ -397,11 +397,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.28292151"
-     inkscape:cx="814.99405"
-     inkscape:cy="391.85974"
+     inkscape:zoom="0.49544951"
+     inkscape:cx="710.31418"
+     inkscape:cy="272.4738"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g1684"
      showgrid="false"
      inkscape:window-width="1252"
      inkscape:window-height="891"
@@ -421,30 +421,28 @@
      transform="translate(-20.952322,-20.044842)">
     <g
        id="g1684"
-       transform="translate(-224.64246,-410.26807)">
+       transform="translate(-210.56563,-410.26807)">
       <text
          xml:space="preserve"
-         style="font-size:24.7843px;line-height:1.25;font-family:Palatino;-inkscape-font-specification:Palatino;font-variant-ligatures:none;text-align:center;letter-spacing:-0.161485px;text-anchor:middle;fill:#ff4400;fill-opacity:0.862903;stroke:#ff5900;stroke-width:0.469205;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         x="419.79642"
-         y="465.46487"
+         style="font-size:18.556px;line-height:1.25;font-family:Palatino;-inkscape-font-specification:Palatino;font-variant-ligatures:none;text-align:center;letter-spacing:-0.120904px;text-anchor:middle;fill:#ff4400;fill-opacity:0.862903;stroke:#ff5900;stroke-width:0.351293;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         x="401.77954"
+         y="463.37454"
          id="text847"><tspan
            sodipodi:role="line"
            id="tspan845"
-           x="419.71567"
-           y="465.46487"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.7843px;font-family:'NGC 292';-inkscape-font-specification:'NGC 292, ';fill:#ff4400;fill-opacity:0.862903;stroke:#ff5900;stroke-width:0.469205;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">CCIP2<tspan
-   style="font-size:11.9717px;baseline-shift:sub;fill:#ff4400;fill-opacity:0.862903;stroke-width:0.469205"
-   id="tspan843" /></tspan></text>
+           x="401.71909"
+           y="463.37454"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.556px;font-family:'NGC 292';-inkscape-font-specification:'NGC 292, ';fill:#ff4400;fill-opacity:0.862903;stroke:#ff5900;stroke-width:0.351293;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">namesys</tspan></text>
       <text
          xml:space="preserve"
          style="font-size:7.20878px;line-height:1.25;font-family:Palatino;-inkscape-font-specification:Palatino;font-variant-ligatures:none;text-align:center;letter-spacing:-0.0469698px;text-anchor:middle;fill:#ff7542;fill-opacity:1;stroke:#ff5900;stroke-width:0.136474;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         x="458.30878"
-         y="473.28793"
+         x="445.83047"
+         y="471.17123"
          id="text847-0"><tspan
            sodipodi:role="line"
            id="tspan845-6"
-           x="458.28528"
-           y="473.28793"
+           x="445.80698"
+           y="471.17123"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.20878px;font-family:'NGC 292';-inkscape-font-specification:'NGC 292, ';fill:#ff7542;fill-opacity:1;stroke:#ff5900;stroke-width:0.136474;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">.eth</tspan></text>
     </g>
     <text
