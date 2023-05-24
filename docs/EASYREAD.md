@@ -1,18 +1,16 @@
-### Project Name
+![](https://raw.githubusercontent.com/namesys-eth/ccip2-resources/main/graphics/png/logo-small.png)
 
-CCIP2.eth: Off-chain ENS Records Manager
+## NameSys.eth: Off-chain ENS Records Manager
 
 ### Project Website
 
-Web3 Client: https://ccip2.eth.limo
+Client: [`NameSys.eth.limo`](https://NameSys.eth.limo) | [`CCIP2.eth.limo`](https://CCIP2.eth.limo)
 
-- Demo Client: https://namesys-eth.github.io/ccip2-eth-client/
+Resolver (Goerli): `Coming Soon`
 
-### Project Logo
+Resolver (Mainnet): `Coming Soon`
 
-![](https://raw.githubusercontent.com/namesys-eth/ccip2-resources/main/graphics/png/logo.png)
-
-### Project Banner
+GitHub: [`GitHub - NameSys`](https://github.com/namesys-eth)
 
 ![](https://raw.githubusercontent.com/namesys-eth/ccip2-resources/main/graphics/png/banner-dark.png)
 

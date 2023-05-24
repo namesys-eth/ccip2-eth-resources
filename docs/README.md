@@ -1,16 +1,12 @@
-# ENSIP-15: Off-chain ENS Records Manager
+# NameSys: Off-chain ENS Records Manager
 
-### Resolver with Gasless ENS Records Management using IPNS and CCIP-Read
+### Universal Resolver with Gasless ENS Records Management using IPNS and CCIP-Read
 
-| &nbsp; | &nbsp; |
-| -- | -- |
-| **Author**    | [freetib.eth](@0xc0de4c0ffee), [sshmatrix.eth](@sshmatrix), [eth.limo](@eth_limo) |
-| **Status**    | Draft |
-| **Submitted** | 2023-04-10 |
+##### author(s) : [`freetib.eth`](@0xc0de4c0ffee), [`sshmatrix.eth`](@sshmatrix), [`eth.limo`](@eth_limo)
 
 ## Abstract
 
-This ENSIP introduces an optional specification for Resolvers to fetch and render ENS records with `CCIP-Read` (ENSIP-10) using IPNS and RFC-8615 `.well-known` standard. The outlined implementation doesn't need web2 gateways to relay off-chain records and relies on users to host their records themselves using IPNS, resulting in a gasless and autonomous implementation. This specification is fully optional and ENS users must manually switch their Resolver address to enable the features included therein.
+This document introduces an optional specification for Resolvers to fetch and render ENS records with `CCIP-Read` (ENSIP-10) using IPNS and RFC-8615 `.well-known` standard. The outlined implementation doesn't need web2 gateways to relay off-chain records and instead relies on hosting of records on IPNS. Users can host these records themselves on IPNS using the proper format or alternatively use the dedicated NameSys client, both of which result in a gasless, upgradeable and autonomous implementation. This specification is fully optional and ENS users must manually switch their Resolver address to enable the features included therein.
 
 ## Motivation
 
