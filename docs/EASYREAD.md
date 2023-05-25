@@ -40,11 +40,9 @@ The usage of ENS records seems to have pleatued despite their enormous potential
 
 💡 NameSys client solves this security vulnerability by using a [novel keygen algorithm](https://github.com/dostr-eth/nips/blob/ethkeygen/111.md) which allows users to generate their IPNS keys in the browser itself and pin their records straight to the IPNS storage; users do not need to share their IPNS keys with us since content pinning in performed on client-side by the user themselves. The records storage on IPFS is handled by NameSys's IPFS node permanently although the users are free to additionally host their records through other providers such as Pinata, Fleek etc.
 
-🥳 With this software stack, users are able to host their records on as many IPFS providers as they like and pin the hosted records to their IPNS public key in a secure and custodial manner that doesn't require private key sharing. Consequently, NameSys enables record updates as often as possible at zero cost and allow for cool features such as dynamic avatars. CCIP2.eth is especially secure since user's IPNS private key is handled client-side and doesn't need to be shared with any third-party pin provider.
-
 ![](https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/png/keygen.png)
 
-💸 We believe that CCIP2 will enable frequent updates of records other than the web `contenthash` and propel ENS adoption as an identity layer.
+🥳 With this software stack, users are able to host their records on as many IPFS providers as they like and pin the hosted records to their IPNS public key in a secure and custodial manner that doesn't require private key sharing. Consequently, NameSys enables record updates as often as possible at zero cost and allow for cool features such as dynamic avatars. We believe that CCIP2 will enable frequent updates of records other than the web `contenthash` and propel ENS adoption as an identity layer.
 
 ## 🕒 Wen `NameSys`?
 
