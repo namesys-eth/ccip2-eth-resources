@@ -20,7 +20,7 @@
 
 - GitHub: [`github.com/namesys-eth`](https://github.com/namesys-eth)
 
-## Description
+## 🧬&nbsp; About `NameSys`
 
 [NameSys](https://namesys.eth.limo) is an **off-chain ENS records manager** which allows users to host their ENS records off-chain on IPNS in an autonomous and gasless fashion. The off-chain records are resolved using `CCIP-Read` by a custom resolver capable of reading records from IPNS. The resulting implementation is **secure**, **free** and **infinitely ungradeable**. The NameSys stack broadly comprises of two parts:
 
