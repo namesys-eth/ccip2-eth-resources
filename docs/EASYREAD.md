@@ -24,7 +24,7 @@
 
 [NameSys](https://namesys.eth.limo) is an **off-chain ENS records manager** which allows users to host their ENS records off-chain on IPNS in an autonomous and gasless fashion. The off-chain records are resolved using `CCIP-Read` by a custom resolver capable of reading records from IPNS. The resulting implementation is **secure**, **free** and **infinitely ungradeable**. The NameSys stack broadly comprises of two parts:
 
-- [**CCIP2.eth**](https://ccip2.eth.limo) is a custom ENS resolver that fetches and renders off-chain records hosted on IPNS with `CCIP-Read`. This resolver doesn't need web2 gateways to relay off-chain records and instead relies on hosting of pre-signed records on IPNS. This is an optional/opt-in resolver and ENS users must manually switch their resolver address to enable off-chain features.
+- [**CCIP2.eth**](https://github.com/namesys-eth/ccip2-eth-resolver) is a custom ENS resolver that fetches and renders off-chain records hosted on IPNS with `CCIP-Read`. This resolver doesn't need web2 gateways to relay off-chain records and instead relies on hosting of pre-signed records on IPNS. This is an optional/opt-in resolver and ENS users must manually switch their resolver address to enable off-chain features.
 
 - [**NameSys Client**](https://namesys.eth.limo) is a dedicated UI for the CCIP2 resolver, where users can set their records themselves on IPNS. NameSys client uses a novel key-generation algorithm which allows users to host their content on IPNS without forfeiting control of their IPNS private keys to a third party. This results in secure, gasless, upgradeable and autonomous ENS records, making NameSys a **first-of-its-kind** implementation.
 
