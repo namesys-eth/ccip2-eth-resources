@@ -1,6 +1,6 @@
 ![](https://raw.githubusercontent.com/namesys-eth/ccip2-resources/main/graphics/png/banner-dark.png)
 
-# [NameSys.eth](https://namesys.eth.limo): Off-chain ENS Records Manager
+# [NameSys.eth](https://namesys.eth.limo): Off-Chain ENS Records Manager
 
 ### ⚙️&nbsp; CLIENTS
 
@@ -13,7 +13,7 @@
 
 | Network | Contract |
 | -------- | -------- |
-| 🧪 **Goerli** | [`0xd23aa5545350cdb4eb6bf705d1fe8b75c99500a8`](https://goerli.etherscan.io/address/0xd23aa5545350cdb4eb6bf705d1fe8b75c99500a8#code) |
+| 🧪 **Goerli** | [`0x0A36060B785Ed46B44a321a33c7115120abEbCf8`](https://goerli.etherscan.io/address/0x0A36060B785Ed46B44a321a33c7115120abEbCf8#code) |
 | 🧬 **Mainnet** | `Coming Soon` |
 
 ### 💿&nbsp; CODEBASE
@@ -44,4 +44,4 @@ The usage of ENS records seems to have pleatued despite their enormous potential
 
 ![](https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/png/keygen.png)
 
-🥳&nbsp; With this software stack, users are able to host their records on as many IPFS providers as they like and pin the hosted records to their IPNS public key in a secure and custodial manner that doesn't require private key sharing. Consequently, NameSys enables record updates as often as possible at zero cost and allow for cool features such as dynamic avatars. We believe that CCIP2 will enable frequent updates of records other than the web `contenthash` and propel ENS adoption as an identity layer.
+🥳&nbsp; With this software stack, users are able to host their records on as many IPFS providers as they like and pin the hosted records to their IPNS public key in a secure and custodial manner that doesn't require private key sharing. Consequently, NameSys enables record updates as often as possible at zero cost and allow for cool features such as dynamic avatars. We believe that NameSys/CCIP2 will enable frequent updates of records other than the web `contenthash` and propel ENS adoption as an identity layer.
