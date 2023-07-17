@@ -14,7 +14,7 @@ ENS has the potential to revolutionise decentralised access to the web with an a
 
 This specification solves the aforementioned problem of high gas costs by storing the ENS records off-chain inside `.well-known` (RFC8615) directory of the users' IPNS contenthash. Records stored under `.well-known` standard can then be queried through [ENSIP-10](https://docs.ens.domains/ens-improvement-proposals/ensip-10-wildcard-resolution) (`CCIP-Read`) implemented in this specification. The implementation outlined here doesn't require any additional gateways to fetch and render the ENS records, and the user is fully in control of their records, e.g. hosting the records on IPFS and linking the IPFS hash to their IPNS key. With this method, users are able to update their records as often as possible at no cost whatsoever without ever losing custody of their data (see figure below). We believe that this specification will enable frequent updates of records other than the `contenthash` and propel ENS adoption as an identity layer.
 
-![](https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/png/namesys.png)
+![](https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/png/fullStack.png)
 
 ## Specification
 
@@ -24,36 +24,9 @@ The proposed Resolver and ENS records storage outlined in this document expects 
 
 This specification is an extension of ENSIP-10 `CCIP-Read`
 
-```solidity
-function resolve(bytes calldata name, bytes calldata data) external view returns(bytes memory)
-```
 
-where, the `_path` to query an ENS record and the full `_domain` as string shall be decoded from encoded `name` variable using `DNSDecode()` function:
 
-```solidity
-function DNSDecode(
-    bytes calldata name
-) public view returns (
-    string memory _domain, string memory _path, string memory _label
-){
-    uint level = 1; // domain heirarchy level
-    uint i = 1; // counter
-    uint len uint8(bytes1(name[:1])); // length of label
-    _label = string(name[1: i += len]); // final value is TLD ".eth"
-    _path = _label; // suffix after /.well-known/
-    _domain = _label; // full domain as string
-
-    while(name[i] > 0x0) { // DNS Decode
-        len = uint8(bytes1(name[i: ++i]));
-        _label = string(name[i: i += len]);
-        _domain = string.concat(_domain, ".", _label);
-        _path = string.concat(_label, "/", _path);
-        ++level;
-    }
-}
-```
-
-### b) Off-chain Records Storage
+### b) Off-Chain Records Storage
 
 For this specification to make pratical sense, we expect the `contenhash` to be of IPNS type. IPNS hashes are key-based decentralised storage pointers that only need to be added once to on-chain storage by the user. IPNS hashes can in turn serve as proxy and point to upgradeable IPFS or IPLD content. In the parent IPNS directory, the records must be stored in the [RFC-8615](https://www.rfc-editor.org/rfc/rfc8615) compliant `.well-known` directory format. ENS records for any name `sub.domain.eth` must then be stored in JSON format under a [reverse-DNS](https://en.wikipedia.org/wiki/Reverse_domain_name_notation) type directory path using `/` instead of `.` as separator, i.e. in format `.well-known/eth/domain/sub/<record>.json`.
 
@@ -98,105 +71,6 @@ Note: If the JSON data is signed by the Registrant of `domain.eth`, it must be p
 | ENS | &nbsp; | `https://domain.eth.limo/.well-known/..` |
 | ENS + IPFS2 resolver| `0xe3`, `0xe5` | `https://<CID-v1>.ipfs2.eth.limo/.well-known/..` |
 
+## Records Manager
+
 ## Code
-
-### --
-
-```solidity
-	//...
-
-	funMap[iResolver.addr.selector] = "addr-60"; // eth address
-	funMap[iResolver.pubkey.selector] = "pubkey";
-	funMap[iResolver.name.selector] = "name";
-
-	//...
-
-	bytes4 fun = bytes4(data[: 4]); // 4 bytes identifier
-
-	if (fun == iResolver.contenthash.selector) {
-		if (level == 3) resolveContenthash(labels[0]);
-		__lookup(HomeContenthash);
-	}
-
-	string memory jsonFile;
-	if (fun == iResolver.text.selector) {
-		jsonFile = abi.decode(data[36: ], (string));
-	} else if (fun == iOverloadResolver.addr.selector) {
-		jsonFile = string.concat(
-			"addr-",
-			uintToNumString(abi.decode(data[36: ], (uint)))
-		);
-	} else {
-		jsonFile = funMap[fun];
-		require(bytes(jsonFile).length != 0, "Invalid Resolver Function");
-	}
-```
-
-### --
-
-```solidity
-	function resolve(bytes calldata name, bytes calldata data) external view returns(bytes memory) {
-        uint level;
-        uint len;
-        bytes[] memory labels = new bytes[](3);
-        //string memory _path;
-        // dns decode
-        for (uint i; name[i] > 0x0;) {
-            len = uint8(bytes1(name[i: ++i]));
-            labels[level] = name[i: i += len];
-            //_path = string.concat(string(labels[level]), "/", _path);
-            ++level;
-        }
-        bytes4 fun = bytes4(data[: 4]); // 4 bytes identifier
-        if (fun == iResolver.contenthash.selector) {
-            if (level == 3)
-                resolveContenthash(labels[0]);
-
-            __lookup(HomeContenthash);
-        }
-        string memory jsonFile;
-        if (fun == iResolver.text.selector) {
-            jsonFile = abi.decode(data[36: ], (string));
-        } else if (fun == iOverloadResolver.addr.selector) {
-            jsonFile = string.concat(
-                "addr-",
-                uintToNumString(abi.decode(data[36: ], (uint)))
-            );
-        } else {
-            jsonFile = funMap[fun];
-            require(bytes(jsonFile).length != 0, "Invalid Resolver Function");
-        }
-
-        string memory _prefix;
-        if (level == 3) {
-            _prefix = string.concat(
-                "https://",
-                string(labels[0]),
-                ".",
-                string(labels[1]),
-                ".eth"
-            );
-        } else {
-            _prefix = string.concat("https://", string(labels[0]), ".eth");
-        }
-        revert OffchainLookup(
-            address(this), // callback contract
-            listGate(_prefix, jsonFile), // gateway URL array
-            "", // {data} field, blank//recheck
-            IPFS2.__callback.selector, // callback function
-            abi.encode( // extradata
-                block.number, // checkpoint
-                keccak256(data), // namehash + calldata
-                keccak256(
-                    abi.encodePacked(
-                        blockhash(block.number - 1),
-                        address(this),
-                        msg.sender,
-                        keccak256(data)
-                    )
-                )
-            )
-        );
-    }
-
-```
