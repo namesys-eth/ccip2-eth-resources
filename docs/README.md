@@ -65,7 +65,7 @@ To ensure secure record resolution, records must be signed by either the owner o
 | Zonehash | `zonehash(bytes32 node)`| `dnsrecord/zonehash.json` |
 | DNS Record | `dnsRecord(bytes32 node, bytes name, uint16 resource) `| `dnsrecord/<resource>.json` |
 
-\* This is the user's web-facing contenthash contained inside the recordhash or masterhash
+\* This is the user's web-facing contenthash contained inside the recordhash
 
 \*\* Name is not implemented as reverse record; users must use the official ENS on-chain reverse record for that feature.
 
@@ -88,6 +88,7 @@ To ensure secure record resolution, records must be signed by either the owner o
 | `K_SIGN` | `secp256k1` | Deterministic Key(gen) |
 | `K_N` | `schnorr` | Deterministic Key(gen) |
 
+&nbsp;
 ![](https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/png/keygen.png)
 
 # &nbsp;
