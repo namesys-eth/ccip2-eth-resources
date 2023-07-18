@@ -23,7 +23,7 @@ The proposed Resolver and ENS records storage outlined in this document expects 
 
 ### CCIP-Read Resolver (ENSIP-10)
 
-This specification is an extension of ENSIP-10 `CCIP-Read` applied to IPNS/IPFS as decentralised storage
+This specification is an extension of ENSIP-10 `CCIP-Read` applied to IPNS/IPFS as decentralised storage.
 
 &nbsp;
 ![](https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/png/namesys.png)
@@ -44,16 +44,6 @@ For this specification to make pratical sense, we expect the `contenhash` to be 
 
 ```solidity
 { data: abi.encode(<address/60>) }
-```
-
-### Global records [❗Experimental]
-
-CCIP2 also offers the experimental feature of setting a global wallet-specific `recordhash` (called a `masterhash`), which stores common records that may be shared across many names in a wallet. This feature will be enabled in the CCIP2 client in the future. When `masterhash` is enabled, the reverse-DNS path is replaced with `eth:address(<owner>)` in storage pointers.
-
-Note: If the JSON data is signed by the Registrant of `domain.eth`, it must be prefixed with `bytes4` of `callback` function selector as,
-
-```solidity
-{ data: bytes.concat(Resolver.___callback.selector, <signedData>}
 ```
 
 ### Security
@@ -97,3 +87,5 @@ To ensure secure record resolution, records must be signed by either the owner o
 | `K_IPNS` | `ed25519` | Deterministic Key(gen) |
 | `K_SIGN` | `secp256k1` | Deterministic Key(gen) |
 | `K_N` | `schnorr` | Deterministic Key(gen) |
+
+![](https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/png/keygen.png)
