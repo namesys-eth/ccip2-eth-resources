@@ -397,11 +397,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.47647196"
-     inkscape:cx="710.31418"
-     inkscape:cy="272.4738"
+     inkscape:zoom="0.45822132"
+     inkscape:cx="753.96121"
+     inkscape:cy="265.92675"
      inkscape:document-units="mm"
-     inkscape:current-layer="g1684"
+     inkscape:current-layer="g1118"
      showgrid="false"
      inkscape:window-width="1252"
      inkscape:window-height="891"
@@ -972,5 +972,16 @@
          d="m 250.67937,-95.05784 62.93083,-62.3836 -31.1918,183.867435 z"
          id="path1677-8" />
     </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.2591px;line-height:1.05;font-family:SPOTNIK;-inkscape-font-specification:SPOTNIK;font-variant-ligatures:none;text-align:center;letter-spacing:0px;text-anchor:middle;opacity:0.385852;fill:#0069ff;fill-opacity:1;stroke:#0069ff;stroke-width:0.892596;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="168.03435"
+       y="179.1857"
+       id="text2139-0-1-8-1"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:SPOTNIK;-inkscape-font-specification:SPOTNIK;text-align:end;text-anchor:end;fill:#0069ff;fill-opacity:1;stroke:#0069ff;stroke-width:0.892596;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         x="168.03435"
+         y="179.1857"
+         id="tspan2163-0-2-8">CCIP-READ</tspan></text>
   </g>
 </svg>

@@ -89,3 +89,5 @@ To ensure secure record resolution, records must be signed by either the owner o
 | `K_N` | `schnorr` | Deterministic Key(gen) |
 
 ![](https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/png/keygen.png)
+
+# &nbsp;
