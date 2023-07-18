@@ -51,5 +51,4 @@ Okay, sure. Here go the step-by-step details: You can start by simply visiting t
 &nbsp;
 ![](https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/png/fullStack.png)
 
-&nbsp;
-## OFF-CHAIN FREE AND SECURE RECORDS BY NAMESYS!
+## 🥳&nbsp; OFF-CHAIN FREE AND SECURE RECORDS BY NAMESYS!
