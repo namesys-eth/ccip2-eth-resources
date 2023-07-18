@@ -40,7 +40,7 @@ NameSys accomplishes secure record storage on IPNS by cleverly generating determ
 
 Okay, sure. Here go the step-by-step details: You can start by simply visiting the [NameSys Client](https://namesys.eth.limo) and connecting your wallet.
 
-🧪&nbsp; The first step to start using off-chain records is the initial setup: it consists of setting your resolver to `CCIP2` (TXN1) and setting your main IPNS contenthash on-chain (called `recordhash`; TXN2) which will contain all your off-chain records. NameSys client will handle generating the corresponding IPNS private key using your signature (SIG1 in Metamask) and a prompted `password`.
+🧪&nbsp; The first step to start using off-chain records is the initial setup: it consists of setting your resolver to `CCIP2` (`TXN1`) and setting your main IPNS contenthash on-chain (called `recordhash`; `TXN2`) which will contain all your off-chain records. NameSys client will handle generating the corresponding IPNS private key using your signature (`SIG1` in Metamask) and a prompted `password`.
 
 > Note: `password` is your unique (and **secret**!) identifier for the IPNS keypair and you must remember this for future record updates
 
