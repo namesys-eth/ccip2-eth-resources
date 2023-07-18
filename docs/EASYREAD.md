@@ -1,4 +1,4 @@
-![](https://raw.githubusercontent.com/namesys-eth/ccip2-resources/main/graphics/png/banner-dark.png)
+![](https://raw.githubusercontent.com/namesys-eth/ccip2-resources/main/graphics/png/banner.png)
 
 # [NameSys.eth](https://namesys.eth.limo): Off-Chain ENS Records Manager
 
