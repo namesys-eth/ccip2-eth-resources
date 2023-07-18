@@ -26,7 +26,7 @@ The proposed Resolver and ENS records storage outlined in this document expects 
 This specification is an extension of ENSIP-10 `CCIP-Read` applied to IPNS/IPFS as decentralised storage
 
 &nbsp;
-![](https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/png/NameSys.png)
+![](https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/png/namesys.png)
 
 ### Off-Chain Records Storage
 
