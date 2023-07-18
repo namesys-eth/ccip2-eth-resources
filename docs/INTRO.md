@@ -9,31 +9,31 @@ Hello frENS,
 
 We are sure that you have asked these questions to yourselves, and we are glad to announce that we have **the** cure for all your ailments. Everyone knows that gas is and has been a big pain in the ass for ENS degens and regens alike. Previously, IPNS made it free to update our contenthashes, and in more recent times, CCIP-Read has promised us free stuff such as off-chain subdomains (e.g. NameStone.xyz). While that is cool, Devs at NameSys continued asking themselves the following question:
 
-#### If we can use IPNS for free contenthash updates and CCIP-Read for free subdomains, why can't we combine the two and use IPNS & CCIP-Read for **Off-Chain Records**?
+#### • If we can use IPNS for free contenthash updates and CCIP-Read for free subdomains, why can't we combine the two and use IPNS & CCIP-Read for **Off-Chain Records**?
 
 Today is the day when we deliver to you the ultimate free stuff, which is the answer to the question above! NameSys is an **Off-Chain ENS Records Manager** which allows users to host their ENS records off-chain on IPNS in an autonomous and gasless fashion. The off-chain records are resolved using `CCIP-Read` by a custom resolver (called `CCIP2`) capable of reading records from IPNS.
 
-#### While this sounds cool, one might wonder why this hasn't been done already...?
+#### • While this sounds cool, one might wonder why this hasn't been done already...?
 
 The main reason is that unlike contenthash, text records such as addresses are sensitive information. `CCIP-Read` is built to read from off-chain sources which are usually servers. Hosting records on centralised servers requires severe trust assumptions and is therefore highly dangerous!
 
-#### Okay, that sounds reasonable! But what about other decentralised off-chain storage solutions like IPFS and Arweave?
+#### • Okay, that sounds reasonable! But what about other decentralised off-chain storage solutions like IPFS and Arweave?
 
 While IPFS can be used, IPFS hashes are immutable and cannot be reused. Using IPFS is a better solution but it is not gas-efficient since updating records will require posting new hashes to the blockchain.
 
-#### Well, we already have IPNS for that! Why not use IPNS similar to how we use it for free contenthash updates?
+#### • Well, we already have IPNS for that! Why not use IPNS similar to how we use it for free contenthash updates?
 
 That is indeed a good idea, but note that IPNS pointers/hashes are actually keypairs. Currently, no public service exists so far that will allow users to autonomously pin IPNS key without sharing the private key. Services like 1W3.io and dWebServices.xyz require users to share their private key with them; this is highly unsuitable for storing sensitive records and a massive threat vector!
 
-#### Hmmm, I see. It seems the key to solving this problem is to design a non-custodial solution for hosting IPNS records where users do not have to share their IPNS private key with the service provider. Unless such a solution exists, off-chain & upgradeable ENS records cannot be safely implemented. Is this correct?
+#### • Hmmm, I see. It seems the key to solving this problem is to design a non-custodial solution for hosting IPNS records where users do not have to share their IPNS private key with the service provider. Unless such a solution exists, off-chain & upgradeable ENS records cannot be safely implemented. Is this correct?
 
 Yes, that is correct, and we have the solution. NameSys stack is capable of solving this exact problem.  
 
-#### How does NameSys do it?
+#### • How does NameSys do it?
 
 NameSys accomplishes secure record storage on IPNS by cleverly generating IPNS keypair from user's wallet signatures (NIP-111 Keygen Algorithm) and using `w3name` API for keyless IPNS hosting. NameSys streamlines the entire mechanism of securely generating IPNS keypair, encoding records with **secure** signatures, posting IPFS content to IPNS in a keyless manner and finally handling **verified** resolution of the records on IPNS with `CCIP2` custom resolver. No more sharing your IPNS private key with a service!
 
-#### That sounds cool! Can you explain the technicals a bit more? What do I have to do to start using off-chain records?
+#### • That sounds cool! Can you explain the technicals a bit more? What do I have to do to start using off-chain records?
 
 Okay, sure. Here go the step-by-step details: You can start by simply visiting the [NameSys Client](https://namesys.eth.limo) and connecting your wallet.
 
