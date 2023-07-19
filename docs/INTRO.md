@@ -1,6 +1,6 @@
 # NameSys.eth: Off-Chain ENS Records Manager
 
-Hello frENS, degENS, squatENS,
+Hello frENS, degENS,
 
 ❗ Have you ever wanted to set your ENS Records for free?
 
@@ -59,7 +59,7 @@ That is precisely what we are saying! Note that NameSys provides you with a simi
 
 #### 💡&nbsp; This seems too good to be true! What's the catch here? Off-chain storage cannot theoretically equate to on-chain storage; this will defeat the whole purpose of blockchain.
 
-Well notes, there is of course a catch! IPNS records can take anywhere between 60 seconds to 60 minutes to propagate after setting them. Unlike on-chain records that have 100% live-time and instantaneous resolution, IPNS records can occassionally be slow to resolve or at least take a few minutes to become live after you have set them. This is the sacrifice we make to keep the records secure! In the grand optimisation scheme, we have tuned for safety and prioritised security over instant post-update availability. Having said that, these issues are easily solvable since NameSys allows users to re-generate & export their IPNS private key (and IPFS hash) if they seek to pin their records elsewhere such as Pinata, Fleek, dWebServices etc. This should resolve the up-time and live-time issue, if/when it exists.
+Well noted, there is of course a catch! IPNS records can take anywhere between 60 seconds to 60 minutes to propagate after setting them. Unlike on-chain records that have 100% live-time and instantaneous resolution, IPNS records can occassionally be slow to resolve or at least take a few minutes to become live after you have set them. This is the sacrifice we make to keep the records secure! In the grand optimisation scheme, we have tuned for safety and prioritised security over instant post-update availability. Having said that, these issues are easily solvable since NameSys allows users to re-generate & export their IPNS private key (and IPFS hash) if they seek to pin their records elsewhere such as Pinata, Fleek, dWebServices etc. This should resolve the up-time and live-time issue, if/when it exists.
 
 #### 💡&nbsp; Does this mean I can set DYNAMIC avatars?!
 
@@ -68,3 +68,13 @@ YES! NameSys makes dynamic avatars possible. NameSys also makes dynamic addresse
 #### 💡&nbsp; This sounds very promising and full of possibilities!
 
 It sure is! We hope that the ENS community will finally be able to take advantage of FREE & SECURE RECORDS FOREVER! 🎉
+
+---
+
+**P.S.** Devs can read full specs on our GitHub page and contact us for enabling APIs dynamic avatars!
+
+---
+
+GitHub: `github.com/namesys-eth`
+Resolver: `0x00`
+Client: `namesys.xyz` | `namesys.eth.limo`
