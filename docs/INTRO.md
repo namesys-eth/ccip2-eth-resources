@@ -2,7 +2,7 @@
 
 Hello frENS, degENS, squatENS,
 
-❗ Have you ever wanted to set your ENS Records for free
+❗ Have you ever wanted to set your ENS Records for free?
 
 ❗ Did you ever wish that you could update your avatar dynamically for free infinite number of times?
 
@@ -10,7 +10,7 @@ Hello frENS, degENS, squatENS,
 
 ❗ How often would you change your records if you could do it for free forever?
 
-We are sure that you heard these musings in countless larping sessions/spaces, and lo and behold, we are esctatic to announce that we have **THE** cure for all your ailments. Everyone knows that gas has been THE biggest pain in the ass for ENS degens and regens alike. Previously, IPNS made it free to update our contenthashes at least, and in more recent times, CCIP-Read has promised us free stuff such as off-chain subdomains (e.g. NameStone.xyz) etc. While that is cool, Devs at NameSys continued asking themselves the following question:
+We are sure that you heard these musings in countless larping sessions/spaces, and lo and behold, we are esctatic to announce that we have **the** cure for all your ailments. Everyone knows that gas has been **the**  biggest pain in the ass for ENS degens and regens alike. Previously, IPNS made it free to update our contenthashes at least, and in more recent times, CCIP-Read has promised us free stuff such as off-chain subdomains (e.g. NameStone.xyz) etc. While that is cool, Devs at NameSys continued asking themselves the following question:
 
 #### 💡&nbsp; If we can use IPNS for free contenthash updates and CCIP-Read for free subdomains, why can't we combine the two and use IPNS & CCIP-Read for **Off-Chain Records**?
 
@@ -34,7 +34,7 @@ Yes, that is correct, and we have the solution! NameSys stack is that non-custod
 
 #### 💡&nbsp; How does NameSys do it?
 
-NameSys accomplishes secure record storage on IPNS by cleverly generating deterministic IPNS keypairs from users' wallet signatures and using `w3name` API for keyless IPNS hosting. NameSys streamlines the entire mechanism of **a)** securely generating IPNS keypair, **b)** encoding records with **secure** signatures, posting IPFS content to IPNS in a **keyless** manner and finally handling **verified** resolution of IPNS records with `CCIP2` custom resolver. No more sharing your IPNS private key with a third-party service!
+NameSys accomplishes secure record storage on IPNS by cleverly generating deterministic IPNS keypairs from users' wallet signatures and using `w3name` API for keyless IPNS hosting. NameSys streamlines the entire mechanism of **a)** securely **generating IPNS keypair**, **b)** encoding records with **secure signatures**, **c)** posting IPFS content to IPNS in a **keyless manner**, and **d)** finally handling **verified resolution** of IPNS records with `CCIP2` custom resolver. No more sharing your IPNS private key with a third-party service!
 
 #### 💡&nbsp; That sounds cool! Can you explain the technicals a bit more? What do I have to do to start using off-chain records?
 
@@ -59,7 +59,7 @@ That is precisely what we are saying! Note that NameSys provides you with a simi
 
 #### 💡&nbsp; This seems too good to be true! What's the catch here? Off-chain storage cannot theoretically equate to on-chain storage; this will defeat the whole purpose of blockchain.
 
-Well notes, there is of course a catch! IPNS records can take anywhere between 60 seconds to 60 minutes to propagate after setting them. Unlike on-chain records that have 100% live-time and instantaneous resolution, IPNS records can occassionally be slow to resolve or at least take a few minutes to become live after you have set them. This is the sacrifice we make to keep the records secure! In the grand optimisation scheme, we have tuned for safety and prioritised security over instant post-update availability. Having said that, these issues are easily solvable since NameSys allows users to re-generate & export their IPNS private key (and IPFS hash) if they seek to pin their records elsewhere such as Pinata, Fleek, dWebServices etc. This should resolve the up-time and live-time issue.
+Well notes, there is of course a catch! IPNS records can take anywhere between 60 seconds to 60 minutes to propagate after setting them. Unlike on-chain records that have 100% live-time and instantaneous resolution, IPNS records can occassionally be slow to resolve or at least take a few minutes to become live after you have set them. This is the sacrifice we make to keep the records secure! In the grand optimisation scheme, we have tuned for safety and prioritised security over instant post-update availability. Having said that, these issues are easily solvable since NameSys allows users to re-generate & export their IPNS private key (and IPFS hash) if they seek to pin their records elsewhere such as Pinata, Fleek, dWebServices etc. This should resolve the up-time and live-time issue, if/when it exists.
 
 #### 💡&nbsp; Does this mean I can set DYNAMIC avatars?!
 
