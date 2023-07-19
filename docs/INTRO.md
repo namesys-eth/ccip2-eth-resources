@@ -71,10 +71,12 @@ It sure is! We hope that the ENS community will finally be able to take advantag
 
 ---
 
-**P.S.** Devs can read full specs on our GitHub page and contact us for enabling APIs dynamic avatars!
+**Note:** Devs can read full specs on our GitHub page and contact us for discussing APIs for dynamic avatars!
 
 ---
 
-GitHub: `github.com/namesys-eth`
-Resolver: `0x00`
-Client: `namesys.xyz` | `namesys.eth.limo`
+**GitHub:** `github.com/namesys-eth`
+
+**Resolver:** `0x00`
+
+**Client:** `namesys.xyz` | `namesys.eth.limo`
