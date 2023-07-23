@@ -69,13 +69,13 @@ YES! NameSys makes dynamic avatars possible. NameSys also makes dynamic addresse
 
 It sure is! We already have new ultra-saver features lined up for CCIP2-v2:
 
-- **WALLET-SPECIFIC RECORDS:** Set default records for all your names in a given wallet!
+- **WALLET-SPECIFIC RECORDS:** Set default records for all your names in a given wallet. No need to set individual IPNS hashes for your names 💸
 
-- **ON-CHAIN SIGNER:** Set an on-chain signer for your records for additional security!
+- **ON-CHAIN SIGNER:** Set an on-chain signer for your records for additional security 🔒
 
-- **REDIRECT RECORDS:** Redirect records from one ENS name to another!
+- **REDIRECT RECORDS:** Redirect records from one ENS name to another ♻️
 
-We hope that the ENS community will finally be able to take advantage of FREE & SECURE RECORDS FOREVER! 🎉
+🥳 We hope that the ENS community will finally be able to take advantage of FREE & SECURE RECORDS FOREVER! 🎉
 
 ---
 
