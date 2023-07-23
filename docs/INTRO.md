@@ -55,7 +55,7 @@ Okay, sure! Here go the step-by-step details: You can start by simply visiting t
 
 #### 💡&nbsp; Hold up, are you saying that I can use off-chain records for FREE FOREVER after completing the one-time initial Setup?
 
-That is precisely what we are saying! Note that NameSys provides you with a similar level of security as on-chain records. It doesn't use any centralised storage like servers. It doesn't force you to share your IPNS private key with a third-party. It is fully autonomous!
+That is precisely what we are saying! Note that NameSys provides you with a similar level of security as on-chain records. It doesn't use any centralised storage like servers. It doesn't force you to share your IPNS private key with a third-party. It is fully autonomous! Your records are additionally verified by your unique signatures at each resolution; this means that your records will stop resolving if you sell or transfer your name.
 
 #### 💡&nbsp; This seems too good to be true! What's the catch here? Off-chain storage cannot theoretically equate to on-chain storage; this will defeat the whole purpose of blockchain.
 
@@ -67,7 +67,15 @@ YES! NameSys makes dynamic avatars possible. NameSys also makes dynamic addresse
 
 #### 💡&nbsp; This sounds very promising and full of possibilities!
 
-It sure is! We hope that the ENS community will finally be able to take advantage of FREE & SECURE RECORDS FOREVER! 🎉
+It sure is! We already have new ultra-saver features lined up for CCIP2-v2:
+
+- **WALLET-SPECIFIC RECORDS:** Set default records for all your names in a given wallet!
+
+- **ON-CHAIN SIGNER:** Set an on-chain signer for your records for additional security!
+
+- **REDIRECT RECORDS:** Redirect records from one ENS name to another!
+
+We hope that the ENS community will finally be able to take advantage of FREE & SECURE RECORDS FOREVER! 🎉
 
 ---
 
@@ -77,6 +85,6 @@ It sure is! We hope that the ENS community will finally be able to take advantag
 
 **GitHub:** `github.com/namesys-eth`
 
-**Resolver:** `0x00`
+**Resolver:** `0x57532d78FfBcC6ac5534A9b39899C7eC89082CdA`
 
 **Client:** `namesys.xyz` | `namesys.eth.limo`
