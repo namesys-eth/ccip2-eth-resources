@@ -93,20 +93,24 @@ To ensure secure record resolution, records must be signed by either the owner o
 &nbsp;
 ![](https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/png/keygen.png)
 
-## Signature Texts and Formats
+## Signature Texts & Formats
 
-### Global Variables:
+### `VARIABLES`:
 
 ```js
+// CAIP-10
 CAIP10 = `eip155:${CHAIN_ID}:${WALLET_ADDRESS}`
 ```
 ```js
+// ENS Domain
 ENS = 'nick.eth'
 ```
 ```js
+// IPNS Key Identifier
 PASSWORD = 'key1'
 ```
 ```solidity
+// EXTRADATA
 bytes32 EXTRADATA = keccak256(
             abi.encodePacked(
               keccak256(
@@ -116,40 +120,18 @@ bytes32 EXTRADATA = keccak256(
               )
             );
 ```
-
-### `SIGN 1` signed by Wallet
-#### `VARIABLES`:
-
 ```js
+// ORIGIN
 if (RECORDHASH) {
   ORIGIN = ENS
 } else if (OWNERHASH) {
   ORIGIN = `eth:${WALLET_ADDRESS}`
 } else if (HTTP_GATEWAY) {
-  ORIGIN = ?
+  ORIGIN = ''
 }
 ```
-
-#### SIGNATURE TEXT:
 ```js
-Requesting Signature To Generate IPNS Key\n\nOrigin: ${ORIGIN}\nKey Type: ed25519\nExtradata: ${EXTRADATA}\nSigned By: ${CAIP10}
-```
-
-### `SIGN 2` signed by Wallet
-#### SIGNATURE TEXT:
-```js
-Requesting Signature To Generate ENS Records Signer\n\nOrigin: ${ORIGIN}\nKey Type: secp256k1\nExtradata: ${EXTRADATA}\nSigned By: ${CAIP10}
-```
-
-### `SIGN 3` signed by Wallet
-#### SIGNATURE TEXT:
-```js
-Requesting Signature To Approve ENS Records Signer\n\nOrigin: ${ENS}\nApproved Signer: ${SIGNER}\nApproved By: ${CAIP10}
-```
-
-### `SIGN 4` signed by `SIGNER`
-#### `VARIABLES`:
-```js
+// Record Encodings
 RECORD_ENCODE in [
   'string',
   'address',
@@ -157,6 +139,7 @@ RECORD_ENCODE in [
 ]
 ```
 ```js
+// Record Types
 RECORD_TYPE in [
   'text/avatar',
   'address/60',
@@ -164,6 +147,7 @@ RECORD_TYPE in [
 ]
 ```
 ```js
+// Record Values
 RECORD_VALUE in [
   'https://example.com/avatar.png', // string-like
   '0xD62fB2a45ECd0000f858700002119d0000d21234', // address-like
@@ -174,6 +158,7 @@ RECORD_VALUE in [
 RECORD_VALUE_BYTES = abi.encodePacked([RECORD_ENCODE, RECORD_VALUE])
 ```
 ```solidity
+// _EXTRADATA_
 bytes32 _EXTRADATA_ = bytesToHexString(
                         abi.encodePacked(
                           keccak256(
@@ -183,9 +168,44 @@ bytes32 _EXTRADATA_ = bytesToHexString(
                       );
 ```
 
-#### SIGNATURE TEXT:
+### `SIGN 1`
+
+- Signed by `WALLET` to generate IPNS Keypair
+
+```js
+Requesting Signature To Generate IPNS Key\n\nOrigin: ${ORIGIN}\nKey Type: ed25519\nExtradata: ${EXTRADATA}\nSigned By: ${CAIP10}
+```
+
+### `SIGN 2`
+
+- Signed by `WALLET` to generate ENS Records Signer Keypair
+
+```js
+Requesting Signature To Generate ENS Records Signer\n\nOrigin: ${ORIGIN}\nKey Type: secp256k1\nExtradata: ${EXTRADATA}\nSigned By: ${CAIP10}
+```
+
+### `SIGN 3`
+
+- Signed by `WALLET` to Approve `SIGNER`
+
+```js
+Requesting Signature To Approve ENS Records Signer\n\nOrigin: ${ENS}\nApproved Signer: ${SIGNER}\nApproved By: ${CAIP10}
+```
+
+### `SIGN 4`
+
+- Signed by `SIGNER` to for Record verification by `CCIP2.eth` Resolver
+
 ```js
 Requesting Signature To Update ENS Record\n\nOrigin: ${ENS}\nRecord Type: ${RECORD_TYPE}\nExtradata: ${_EXTRADATA_}\nSigned By: ${CAIP10}
+```
+
+### `SIGN 5`
+
+- Signed by `SIGNER` to redirect to a dApp service
+
+```js
+Requesting Signature To Install dApp Service\n\nOrigin: ${ENS}\nApp: ${DAPP}\nExtradata: ${_EXTRADATA_}\nSigned By: ${CAIP10}
 ```
 
 # &nbsp;
