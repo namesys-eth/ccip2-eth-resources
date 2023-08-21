@@ -155,6 +155,7 @@ RECORD_VALUE in [
 ]
 ```
 ```js
+// Encoded Records
 RECORD_VALUE_BYTES = abi.encodePacked([RECORD_ENCODE, RECORD_VALUE])
 ```
 ```solidity
@@ -168,7 +169,7 @@ bytes32 _EXTRADATA_ = bytesToHexString(
                       );
 ```
 
-### `SIGN 1`
+### `SIGN 1`:
 
 - Signed by `WALLET` to generate IPNS Keypair
 
@@ -176,7 +177,7 @@ bytes32 _EXTRADATA_ = bytesToHexString(
 Requesting Signature To Generate IPNS Key\n\nOrigin: ${ORIGIN}\nKey Type: ed25519\nExtradata: ${EXTRADATA}\nSigned By: ${CAIP10}
 ```
 
-### `SIGN 2`
+### `SIGN 2`:
 
 - Signed by `WALLET` to generate ENS Records Signer Keypair
 
@@ -184,7 +185,7 @@ Requesting Signature To Generate IPNS Key\n\nOrigin: ${ORIGIN}\nKey Type: ed2551
 Requesting Signature To Generate ENS Records Signer\n\nOrigin: ${ORIGIN}\nKey Type: secp256k1\nExtradata: ${EXTRADATA}\nSigned By: ${CAIP10}
 ```
 
-### `SIGN 3`
+### `SIGN 3`:
 
 - Signed by `WALLET` to approve `SIGNER`
 
@@ -192,7 +193,7 @@ Requesting Signature To Generate ENS Records Signer\n\nOrigin: ${ORIGIN}\nKey Ty
 Requesting Signature To Approve ENS Records Signer\n\nOrigin: ${ENS}\nApproved Signer: ${SIGNER}\nApproved By: ${CAIP10}
 ```
 
-### `SIGN 4`
+### `SIGN 4`:
 
 - Signed by `SIGNER` for Record verification by `CCIP2.eth` Resolver
 
@@ -200,7 +201,7 @@ Requesting Signature To Approve ENS Records Signer\n\nOrigin: ${ENS}\nApproved S
 Requesting Signature To Update ENS Record\n\nOrigin: ${ENS}\nRecord Type: ${RECORD_TYPE}\nExtradata: ${_EXTRADATA_}\nSigned By: ${CAIP10}
 ```
 
-### `SIGN 5`
+### `SIGN 5`:
 
 - Signed by `SIGNER` to redirect to a dApp service
 
