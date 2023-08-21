@@ -93,4 +93,98 @@ To ensure secure record resolution, records must be signed by either the owner o
 &nbsp;
 ![](https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/png/keygen.png)
 
+## Signature Formats
+
+---
+```js
+CAIP10 = `eip155:${CHAIN_ID}:${WALLET_ADDRESS}`
+```
+```js
+ENS = 'nick.eth'
+```
+```js
+PASSWORD = 'key1'
+```
+```solidity
+bytes32 EXTRADATA = keccak256(
+            abi.encodePacked(
+              keccak256(
+                abi.encodePacked(PASSWORD)
+              ),
+              WALLET_ADDRESS
+              )
+            );
+```
+---
+
+### `SIGN 1`
+
+---
+```js
+if (RECORDHASH) {
+  ORIGIN = ENS
+} else if () {
+  ORIGIN = `eth:${WALLET_ADDRESS}`
+}
+```
+---
+
+```js
+Requesting Signature To Generate IPNS Key\n\nOrigin: ${ORIGIN}\nKey Type: ed25519\nExtradata: ${EXTRADATA}\nSigned By: ${CAIP10}
+```
+
+### `SIGN 2`
+
+```js
+Requesting Signature To Generate ENS Records Signer\n\nOrigin: ${ORIGIN}\nKey Type: secp256k1\nExtradata: ${EXTRADATA}\nSigned By: ${CAIP10}
+```
+
+### `SIGN 3`
+
+```js
+Requesting Signature To Approve ENS Records Signer\n\nOrigin: ${ENS}\nApproved Signer: ${SIGNER}\nApproved By: ${CAIP10}
+```
+
+### `SIGN 4`
+
+---
+```js
+RECORD_ENCODE in [
+  'string',
+  'address',
+  'bytes'
+]
+```
+```js
+RECORD_TYPE in [
+  'text/avatar',
+  'address/60',
+  'contenthash'
+]
+```
+```js
+RECORD_VALUE in [
+  'https://example.com/avatar.png', // String-like
+  '0xD62fB2a45ECd0000f858700002119d0000d21234', // Address-like
+  'e50101720024080112203c5aba6c9b5055a5fa12281c486188ed8ae2b6ef394b3d981b00d17a4b51735c' // HexBytes-like
+]
+```
+```js
+RECORD_VALUE_BYTES = abi.encodePacked([RECORD_ENCODE, RECORD_VALUE])
+```
+```solidity
+bytes32 EXTRADATA = bytesToHexString(
+                      abi.encodePacked(
+                        keccak256(
+                          RECORD_VALUE_BYTES
+                        )
+                      )
+                    );
+```
+---
+
+```js
+Requesting Signature To Update ENS Record\n\nOrigin: ${ENS}\nRecord Type: ${RECORD_TYPE}\nExtradata: ${_EXTRADATA}\nSigned By: ${CAIP10}
+```
+
 # &nbsp;
