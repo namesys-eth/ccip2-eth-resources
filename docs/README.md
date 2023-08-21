@@ -117,7 +117,7 @@ bytes32 EXTRADATA = keccak256(
             );
 ```
 
-### `SIGN 1`
+### `SIGN 1` signed by Wallet
 #### `VARIABLES`:
 
 ```js
@@ -135,19 +135,19 @@ if (RECORDHASH) {
 Requesting Signature To Generate IPNS Key\n\nOrigin: ${ORIGIN}\nKey Type: ed25519\nExtradata: ${EXTRADATA}\nSigned By: ${CAIP10}
 ```
 
-### `SIGN 2`
+### `SIGN 2` signed by Wallet
 #### SIGNATURE TEXT:
 ```js
 Requesting Signature To Generate ENS Records Signer\n\nOrigin: ${ORIGIN}\nKey Type: secp256k1\nExtradata: ${EXTRADATA}\nSigned By: ${CAIP10}
 ```
 
-### `SIGN 3`
+### `SIGN 3` signed by Wallet
 #### SIGNATURE TEXT:
 ```js
 Requesting Signature To Approve ENS Records Signer\n\nOrigin: ${ENS}\nApproved Signer: ${SIGNER}\nApproved By: ${CAIP10}
 ```
 
-### `SIGN 4`
+### `SIGN 4` signed by `SIGNER`
 #### `VARIABLES`:
 ```js
 RECORD_ENCODE in [
@@ -165,27 +165,27 @@ RECORD_TYPE in [
 ```
 ```js
 RECORD_VALUE in [
-  'https://example.com/avatar.png', // String-like
-  '0xD62fB2a45ECd0000f858700002119d0000d21234', // Address-like
-  'e50101720024080112203c5aba6c9b5055a5fa12281c486188ed8ae2b6ef394b3d981b00d17a4b51735c' // HexBytes-like
+  'https://example.com/avatar.png', // string-like
+  '0xD62fB2a45ECd0000f858700002119d0000d21234', // address-like
+  'e50101720024080112203c5aba6c9b5055a5fa12281c486188ed8ae2b6ef394b3d981b00d17a4b51735c' // hexBytes-like
 ]
 ```
 ```js
 RECORD_VALUE_BYTES = abi.encodePacked([RECORD_ENCODE, RECORD_VALUE])
 ```
 ```solidity
-bytes32 EXTRADATA = bytesToHexString(
-                      abi.encodePacked(
-                        keccak256(
-                          RECORD_VALUE_BYTES
+bytes32 _EXTRADATA_ = bytesToHexString(
+                        abi.encodePacked(
+                          keccak256(
+                            RECORD_VALUE_BYTES
+                          )
                         )
-                      )
-                    );
+                      );
 ```
 
 #### SIGNATURE TEXT:
 ```js
-Requesting Signature To Update ENS Record\n\nOrigin: ${ENS}\nRecord Type: ${RECORD_TYPE}\nExtradata: ${_EXTRADATA}\nSigned By: ${CAIP10}
+Requesting Signature To Update ENS Record\n\nOrigin: ${ENS}\nRecord Type: ${RECORD_TYPE}\nExtradata: ${_EXTRADATA_}\nSigned By: ${CAIP10}
 ```
 
 # &nbsp;
