@@ -93,8 +93,9 @@ To ensure secure record resolution, records must be signed by either the owner o
 &nbsp;
 ![](https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/png/keygen.png)
 
-## Signature Formats
+## `SIGNATURE` Formats
 
+### Global Macros
 ---
 ```js
 CAIP10 = `eip155:${CHAIN_ID}:${WALLET_ADDRESS}`
@@ -118,7 +119,7 @@ bytes32 EXTRADATA = keccak256(
 ---
 
 ### `SIGN 1`
-
+#### `VARIABLES`:
 ---
 ```js
 if (RECORDHASH) {
@@ -129,24 +130,25 @@ if (RECORDHASH) {
 ```
 ---
 
+#### SIGNATURE TEXT:
 ```js
 Requesting Signature To Generate IPNS Key\n\nOrigin: ${ORIGIN}\nKey Type: ed25519\nExtradata: ${EXTRADATA}\nSigned By: ${CAIP10}
 ```
 
 ### `SIGN 2`
-
+#### SIGNATURE TEXT:
 ```js
 Requesting Signature To Generate ENS Records Signer\n\nOrigin: ${ORIGIN}\nKey Type: secp256k1\nExtradata: ${EXTRADATA}\nSigned By: ${CAIP10}
 ```
 
 ### `SIGN 3`
-
+#### SIGNATURE TEXT:
 ```js
 Requesting Signature To Approve ENS Records Signer\n\nOrigin: ${ENS}\nApproved Signer: ${SIGNER}\nApproved By: ${CAIP10}
 ```
 
 ### `SIGN 4`
-
+#### `VARIABLES`:
 ---
 ```js
 RECORD_ENCODE in [
@@ -183,6 +185,7 @@ bytes32 EXTRADATA = bytesToHexString(
 ```
 ---
 
+#### SIGNATURE TEXT:
 ```js
 Requesting Signature To Update ENS Record\n\nOrigin: ${ENS}\nRecord Type: ${RECORD_TYPE}\nExtradata: ${_EXTRADATA}\nSigned By: ${CAIP10}
 ```
