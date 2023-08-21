@@ -186,7 +186,7 @@ Requesting Signature To Generate ENS Records Signer\n\nOrigin: ${ORIGIN}\nKey Ty
 
 ### `SIGN 3`
 
-- Signed by `WALLET` to Approve `SIGNER`
+- Signed by `WALLET` to approve `SIGNER`
 
 ```js
 Requesting Signature To Approve ENS Records Signer\n\nOrigin: ${ENS}\nApproved Signer: ${SIGNER}\nApproved By: ${CAIP10}
@@ -194,7 +194,7 @@ Requesting Signature To Approve ENS Records Signer\n\nOrigin: ${ENS}\nApproved S
 
 ### `SIGN 4`
 
-- Signed by `SIGNER` to for Record verification by `CCIP2.eth` Resolver
+- Signed by `SIGNER` for Record verification by `CCIP2.eth` Resolver
 
 ```js
 Requesting Signature To Update ENS Record\n\nOrigin: ${ENS}\nRecord Type: ${RECORD_TYPE}\nExtradata: ${_EXTRADATA_}\nSigned By: ${CAIP10}
