@@ -93,10 +93,10 @@ To ensure secure record resolution, records must be signed by either the owner o
 &nbsp;
 ![](https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/png/keygen.png)
 
-## `SIGNATURE` Formats
+## Signature Texts and Formats
 
-### Global Macros
----
+### Global Variables:
+
 ```js
 CAIP10 = `eip155:${CHAIN_ID}:${WALLET_ADDRESS}`
 ```
@@ -116,19 +116,19 @@ bytes32 EXTRADATA = keccak256(
               )
             );
 ```
----
 
 ### `SIGN 1`
 #### `VARIABLES`:
----
+
 ```js
 if (RECORDHASH) {
   ORIGIN = ENS
-} else if () {
+} else if (OWNERHASH) {
   ORIGIN = `eth:${WALLET_ADDRESS}`
+} else if (HTTP_GATEWAY) {
+  ORIGIN = ?
 }
 ```
----
 
 #### SIGNATURE TEXT:
 ```js
@@ -149,7 +149,6 @@ Requesting Signature To Approve ENS Records Signer\n\nOrigin: ${ENS}\nApproved S
 
 ### `SIGN 4`
 #### `VARIABLES`:
----
 ```js
 RECORD_ENCODE in [
   'string',
@@ -183,7 +182,6 @@ bytes32 EXTRADATA = bytesToHexString(
                       )
                     );
 ```
----
 
 #### SIGNATURE TEXT:
 ```js
