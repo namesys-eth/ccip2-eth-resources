@@ -151,3 +151,11 @@ Upon approving `SIGN 3`, your records will be signed by the ephemeral Signer and
 &nbsp;
 
 Congratulations of setting off-chain and secure records on IPFS for your ENS name! 🥳
+
+## More Resources
+
+[`SUMMARY`](https://github.com/namesys-eth/ccip2-eth-resources/blob/main/docs/EASYREAD.md)
+
+[`FAQ`](https://github.com/namesys-eth/ccip2-eth-resources/blob/main/docs/INTRO.md)
+
+[`SPECS`](https://github.com/namesys-eth/ccip2-eth-resources/blob/main/docs/README.md)
