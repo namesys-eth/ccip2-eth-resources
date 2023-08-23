@@ -41,7 +41,7 @@ You can now either `Search` for a domain, or go to `MY NAMES` to see all ENS dom
 
 ## Step 3
 
-Choose a domain that you wish to set records for by clicking on `EDIT`. You can only set records for domains that you **OWN**. Upon clicking on `EDIT`, you will see the current records and status of your selected domain in the preview panel.
+Choose a domain that you wish to set records for by clicking on `EDIT`. You can only set records for domains that you **OWN**. Upon clicking on `EDIT`, you will see the current records and status of your selected domain in the Preview Panel.
 
 &nbsp;
 <img src="https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/guide/Preview.png" width="500">
@@ -79,7 +79,7 @@ Upon clicking `RECORDHASH`:
 <img src="https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/guide/TXN1.png" width="700">
 &nbsp;
 
-- Once `TXN 1` is confirmed successfully, you will be prompted to choose your **secret** IPNS Key Identifier/Password. This identifier is equivalent to a secret password for your IPNS Recordhash, and you can replace your Recordhash in the future whenever required by choosing a different password. **This password must be kept secret!** You will also be required to enter this password when updating your off-chain records in the future.
+- Once `TXN 1` is confirmed successfully, you will be returned to the Preview Panel. You may now click on `SET` next to Storage to set the Recordhash. Upon clicking, you will be prompted to choose your **secret** IPNS Key Identifier/Password. This identifier is equivalent to a secret password for your IPNS Recordhash, and you can replace your Recordhash in the future whenever required by choosing a different password. **This password must be kept secret!** You will also be required to enter this password when updating your off-chain records in the future.
 
 &nbsp;
 <img src="https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/guide/Password.png" width="500">
@@ -110,7 +110,7 @@ We had assumed earlier that the user chose the `RECORDHASH` option in **Step 4a*
 <img src="https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/guide/Ownerhash.png" width="400">
 &nbsp;
 
-Here you can set the `OWNERHASH` option by clicking on `SET`. The procedure for this is similar to the Recordhash option and you will be prompted for `SIGN 1` and `TXN 2`. Upon confirmtion of `TXN 2`, the `OWNERHASH` option will become active in the preview panel! Now you may set records for your domains in Ownerhash and `TXN 2` won't need to be repeated again for another name (unless the user chooses to explicitly).
+Here you can set the `OWNERHASH` option by clicking on `SET`. The procedure for this is similar to the Recordhash option and you will be prompted for `SIGN 1` and `TXN 2`. Upon confirmtion of `TXN 2`, the `OWNERHASH` option will become active in the Preview Panel! Now you may set records for your domains in Ownerhash and `TXN 2` won't need to be repeated again for another name (unless the user chooses to explicitly).
 
 &nbsp;
 <img src="https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/guide/ownerhashDialog.png" width="400">
@@ -122,7 +122,7 @@ Here you can set the `OWNERHASH` option by clicking on `SET`. The procedure for 
 
 ## Step 6
 
-Let's now finally set those damn records! Open the preview panel again for domain that is already set up. Irrespective of whether the selected domain has either a Recordhash or the global Ownerhash, you will find the record fields activated. Simply enter the valid values for the records and click on `EDIT`. You may set multiple records simultaneously by clicking any one of the active `EDIT` buttons.
+Let's now finally set those damn records! Open the Preview Panel again for domain that is already set up. Irrespective of whether the selected domain has either a Recordhash or the global Ownerhash, you will find the record fields activated. Simply enter the valid values for the records and click on `EDIT`. You may set multiple records simultaneously by clicking any one of the active `EDIT` buttons.
 
 > Currently, NameSys supports setting `AVATAR`, `ADDRESS`, `CONTENTHASH` only but this list can be extended at zero cost at ny time. We intend to add more records to it soon based on community feedback!
 
