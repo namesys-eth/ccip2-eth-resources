@@ -182,7 +182,7 @@ Requesting Signature To Generate IPNS Key\n\nOrigin: ${ORIGIN}\nKey Type: ed2551
 - Signed by `WALLET` to generate ENS Records Signer Keypair
 
 ```js
-Requesting Signature To Generate ENS Records Signer\n\nOrigin: ${ORIGIN}\nKey Type: secp256k1\nExtradata: ${EXTRADATA}\nSigned By: ${CAIP10}
+Requesting Signature To Generate ENS Records Signer\n\nOrigin: ${ENS}\nKey Type: secp256k1\nExtradata: ${EXTRADATA}\nSigned By: ${CAIP10}
 ```
 
 ### `SIGN 3`:
