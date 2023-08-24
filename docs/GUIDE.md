@@ -16,6 +16,8 @@ NameSys Client lets you set Off-Chain Records for your ENS domains. The Client i
 - [`NameSys.eth`](https://namesys.eth.limo)
 - [`CCIP2.eth`](https://ccip2.eth.limo)
 
+> Domains with Emojis are not yet supported
+
 ## Step 1
 
 Connect your Wallet to the Client
@@ -79,7 +81,7 @@ Upon clicking `RECORDHASH`:
 <img src="https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/guide/TXN1.png" width="700">
 &nbsp;
 
-- Once `TXN 1` is confirmed successfully, you will be returned to the Preview Panel. You may now click on `SET` next to Storage to set the Recordhash. Upon clicking, you will be prompted to choose your **SECRET** IPNS Key Identifier/`PASSWORD`. This identifier is equivalent to a secret `PASSWORD` for your IPNS Recordhash, and you can replace your Recordhash in the future whenever required by choosing a different `PASSWORD`. **This `PASSWORD` must be kept secret!** You will also be required to enter this `PASSWORD` when updating your off-chain records in the future.
+- Once `TXN 1` is confirmed, you will be returned to the Preview Panel. You may now click on `SET` next to Storage to set the Recordhash. Upon clicking, you will be prompted to choose your **SECRET** IPNS Key Identifier/`PASSWORD`. This identifier is equivalent to a secret `PASSWORD` for your IPNS Recordhash, and you can replace your Recordhash in the future whenever required by choosing a different `PASSWORD`. **This `PASSWORD` must be kept secret!** You will also be required to enter this `PASSWORD` when updating your off-chain records in the future.
 
 &nbsp;
 <img src="https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/guide/Password.png" width="500">
