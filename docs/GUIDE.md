@@ -22,6 +22,7 @@ NameSys Client lets you set Off-Chain Records for your ENS domains. The Client i
 
 Connect your Wallet to the Client
 
+&nbsp;
 <img src="https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/guide/Connect.png" width="900">
 
 ## Step 2
@@ -32,6 +33,7 @@ You can now either `Search` for a domain, or go to `MY NAMES` to see all ENS dom
 
 ### 2a: `Search`
 
+&nbsp;
 <img src="https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/guide/Search.png" width="600">
 
 &nbsp;

@@ -79,16 +79,16 @@ To ensure secure record resolution, records must be signed by either the owner o
 | `ipfs://<contenthash>` | `0xe3` | `https://<base32-CID-v1>.ipfs.dweb.link/.well-known/..` |
 | ENS + IPNS Node | &nbsp; | `https://domain-eth.ipns.dweb.link/.well-known/..` |
 | ENS | &nbsp; | `https://domain.eth.limo/.well-known/..` |
-| ENS + IPFS2 resolver| `0xe3`, `0xe5` | `https://<CID-v1>.ipfs2.eth.limo/.well-known/..` |
+| ENS + [`IPFS2`](https://ipfs2.eth.limo) Resolver| `0xe3`, `0xe5` | `https://<CID-v1>.ipfs2.eth.limo/.well-known/..` |
 
 ## Details of Setup, Signatures and Keys
 
 | Key | Type | Nature |
 | --- | --- | --- |
-| `K_EOA` | `secp256k1` | Ethereum Wallet Key |
-| `K_IPNS` | `ed25519` | Deterministic Key(gen) |
-| `K_SIGN` | `secp256k1` | Deterministic Key(gen) |
-| `K_N` | `schnorr` | Deterministic Key(gen) |
+| `KEY_WALLET` | `secp256k1` | Ethereum Wallet Key |
+| `KEY_IPNS` | `ed25519` | Deterministic Key(gen) |
+| `KEY_SIGNER` | `secp256k1` | Deterministic Key(gen) |
+| `KEY_N` | `schnorr` | Deterministic Key(gen) |
 
 &nbsp;
 ![](https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/png/keygen.png)
