@@ -41,6 +41,7 @@ You can now either `Search` for a domain, or go to `MY NAMES` to see all ENS dom
 
 ### 2b: `MY NAMES`
 
+&nbsp;
 <img src="https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/guide/myNames.png" width="600">
 
 ## Step 3
