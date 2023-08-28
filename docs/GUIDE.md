@@ -81,7 +81,7 @@ Upon clicking `RECORDHASH`:
 - Transaction `TXN 1` will be triggered and confirming this will migrate the Resolver to `CCIP2.eth: 0x839B3B540A9572448FD1B2335e0EB09Ac1A02885`.
 
 &nbsp;
-<img src="https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/guide/TXN1.png" width="700">
+<img src="https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/guide/TXN1.png" width="400">
 &nbsp;
 
 - Once `TXN 1` is confirmed, you will be returned to the Preview Panel. You may now click on `SET` next to Storage to set the Recordhash. Upon clicking, you will be prompted to choose your **SECRET** IPNS Key Identifier/`PASSWORD`. This identifier is equivalent to a secret `PASSWORD` for your IPNS Recordhash, and you can replace your Recordhash in the future whenever required by choosing a different `PASSWORD`. **This `PASSWORD` must be kept secret!** You will also be required to enter this `PASSWORD` when updating your off-chain records in the future.
@@ -93,13 +93,13 @@ Upon clicking `RECORDHASH`:
 - Upon entering the identifier, signature `SIGN 1` will be triggered. This signature is required to generate your IPNS Recordhash which will store your off-chain records on IPFS network.
 
 &nbsp;
-<img src="https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/guide/SIGN1.png" width="700">
+<img src="https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/guide/SIGN1.png" width="400">
 &nbsp;
 
 - Confirming `SIGN 1` will trigger transaction `TXN 2` which will set the on-chain IPNS Recordhash generated using `SIGN 1`
 
 &nbsp;
-<img src="https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/guide/TXN2.png" width="700">
+<img src="https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/guide/TXN2.png" width="400">
 &nbsp;
 
 Confirmtion of `TXN 2` completes the setup process and you are now ready to use off-chain records for your selected ENS domain! 🥳
@@ -138,13 +138,13 @@ Let's now finally set those damn records! Open the Preview Panel again for domai
 - Upon clicking `EDIT`, you will again be prompted for the IPNS Key Identifier and then `SIGN 1` will be requested. Confirming `SIGN 1` will trigger signature `SIGN 2`; `SIGN 2` is required to generate the ephemeral ENS Records Signer Key which will sign your records for verification. This steps ensures the safety and sanctity of your records.
 
 &nbsp;
-<img src="https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/guide/SIGN2.png" width="700">
+<img src="https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/guide/SIGN2.png" width="400">
 &nbsp;
 
 - Confirming `SIGN 2` will trigger `SIGN 3` for approving the ephemeral Signer generated using `SIGN 2`. `SIGN 3` approval is required by `CCIP2.eth` Resolver to validate the ephemeral Signer.
 
 &nbsp;
-<img src="https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/guide/SIGN3.png" width="700">
+<img src="https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/guide/SIGN3.png" width="400">
 &nbsp;
 
 > NameSys Client also shortly begin offering the option to set the ephemeral Signer on-chain for better security. Using this option will remove the need for `SIGN3`, although it will add to the gas costs.
