@@ -16,8 +16,6 @@ NameSys Client lets you set Off-Chain Records for your ENS domains. The Client i
 - [`NameSys.eth`](https://namesys.eth.limo)
 - [`CCIP2.eth`](https://ccip2.eth.limo)
 
-> Domains with Emojis are not yet supported
-
 ## Step 1
 
 Connect your Wallet to the Client
