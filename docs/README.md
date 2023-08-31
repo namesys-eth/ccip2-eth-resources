@@ -48,7 +48,7 @@ For this specification to make pratical sense, we expect the `contenhash` to be 
 
 ### Security
 
-To ensure secure record resolution, records must be signed by either the owner of a domain or a domain-specific signer (called `approvedSigner`) set by the owner. The `approvedSigner` may be stored on-chain or off-chain by the owner in the CCIP2 contract. Upon each resolution, CCIP2 resolver verifies the signature against on-chain and/or off-chain `approvedSigner`, aka on-chain signer and/or off-chain signer approved by the owner.
+To ensure secure record resolution, records must be signed by a domain-specific signer (called `approvedSigner`) set by the manager of a legacy ENS or the owner of a wrapped ENS. The `approvedSigner` may be stored on-chain or off-chain by the manager (of a legacy ENS) or the owner (of a wrapped ENS) in the CCIP2 contract. Upon each resolution, CCIP2 resolver verifies the signature against on-chain and/or off-chain `approvedSigner`, aka on-chain signer and/or off-chain signer approved by the manager/owner of the legacy/wrapped (sub)domain.
 
 ## Resolver Function → JSON Mapping
 

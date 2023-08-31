@@ -6,7 +6,7 @@
 
 ## Prerequisites
 
-- **OWN** an ENS (sub)domain, whether Legacy or Wrapped. Being a Controller or Manager is not sufficient.
+- **MANAGE** a Legacy ENS (sub)domain or **OWN** a Wrapped ENS (sub)domain. Ownership is not sufficient for Legacy ENS; you must have **MANAGER** access! In case of Wrapped ENS, **MANAGER** access is not sufficient and you must have **OWNER** access.
 
 ## NameSys Client
 
@@ -44,7 +44,7 @@ You can now either `Search` for a domain, or go to `MY NAMES` to see all ENS dom
 
 ## Step 3
 
-Choose a domain that you wish to set records for by clicking on `EDIT`. You can only set records for domains that you **OWN**. Upon clicking on `EDIT`, you will see the current records and status of your selected domain in the Preview Panel.
+Choose a domain that you wish to set records for by clicking on `EDIT`. You can only set records for domains that you explicitly **MANAGE** in case of Legacy ENS or **OWN** in case of Wrapped ENS. Upon clicking on `EDIT`, you will see the current records and status of your selected domain in the Preview Panel.
 
 &nbsp;
 <img src="https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/guide/Preview.png" width="500">
