@@ -4,7 +4,7 @@
 
 ## Motivation
 
-With the ability to update ENS records infinitely with NameSys, two parties can interact in an encrypted manner using their respective `RSA` (`2048` bits) public key records. For example, if Bob wants Alice to pay an invoice (to one of Bob's private addresses), he can encrypt the invoice with Alice's `RSA` public key and post the resulting Cipher as a record. Alice can then read this record, decrypt its contents with her private `RSA` key and pay the resulting invoice.
+With the ability to update ENS records infinitely with NameSys, two parties can interact in an **encrypted** manner using their respective `RSA` (`2048 BITS`) public key records. For example, if Bob wants Alice to pay an `invoice` (to one of Bob's private addresses), he can encrypt the invoice with Alice's `RSA` public key and post the resulting `cipher` as a record. Alice can then read this encrypted record, decrypt its contents with her private `RSA` key and pay the resulting `invoice`.
 
 &nbsp;
 ![](https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/png/stealth.png)
