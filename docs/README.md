@@ -88,7 +88,8 @@ To ensure secure record resolution, records must be signed by a domain-specific 
 | `KEY_WALLET` | `secp256k1` | Ethereum Wallet Key |
 | `KEY_IPNS` | `ed25519` | Deterministic Key(gen) |
 | `KEY_SIGNER` | `secp256k1` | Deterministic Key(gen) |
-| `KEY_N` | `schnorr` | Deterministic Key(gen) |
+| `KEY_SCH` | `schnorr` | Deterministic Key(gen) |
+| `KEY_RSA` | `rsa-2048` | Deterministic Key(gen) |
 
 &nbsp;
 ![](https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/png/keygen.png)
@@ -210,3 +211,11 @@ Requesting Signature To Install dApp Service\n\nOrigin: ${ENS}\nApp: ${DAPP}\nEx
 ```
 
 # &nbsp;
+
+### `SIGN 6`:
+
+- Signed by `WALLET` to generate RSA Keypair
+
+```js
+Requesting Signature To Generate RSA Key\n\nOrigin: ${ORIGIN}\nKey Type: RSA-2048\nExtradata: ${EXTRADATA}\nSigned By: ${CAIP10}
+```
