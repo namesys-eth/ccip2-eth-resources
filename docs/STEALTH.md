@@ -68,7 +68,7 @@ The Payer can now pay you to your private address or ENS 🥳
 
 ### STEP 3b: SENDING STEALTH PAYMENTS
 
-Let's now go through how one can pay privately using NameSys. To begin, enter the ENS of the person you are supposed to be sending private payment to and click on `DECRYPT`.
+Let's now go through how one can pay privately using NameSys. To begin, enter the ENS of the receiver of private payment and click on `DECRYPT`.
 
 &nbsp;
 <img src="https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/guide/Decrypt.png" width="500">
