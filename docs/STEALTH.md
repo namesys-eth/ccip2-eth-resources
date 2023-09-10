@@ -28,7 +28,7 @@ Requesting Signature To Generate RSA Key\n\nOrigin: ${ORIGIN}\nKey Type: RSA-204
 Find your way to the Stealth Records button. This button will be active only after you have completed the resolver migration (see [full guide here](https://github.com/namesys-eth/ccip2-eth-resources/blob/main/docs/GUIDE.md) for migration)
 
 &nbsp;
-<img src="https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/guide/enterStealth.png" width="400">
+<img src="https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/guide/enterStealth.png" width="500">
 
 ### STEP 2
 
@@ -49,7 +49,7 @@ Once your RSA key is set, you are ready to send and receive stealth payments.
 Click on `SET` in the `STEALTH` field.
 
 &nbsp;
-<img src="https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/guide/RSA.png" width="400">
+<img src="https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/guide/RSA.png" width="500">
 &nbsp;
 
 This will open the password modal as usual followed by the Invoice modal where can set the Payer, your private address or private ENS and the amount to receive.
@@ -61,7 +61,7 @@ This will open the password modal as usual followed by the Invoice modal where c
 Fill in the values of your choice and complete the process with signatures. Once your are finished, your encrypted invoice will appear in the `STEALTH` field
 
 &nbsp;
-<img src="https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/guide/Encrypted.png" width="400">
+<img src="https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/guide/Encrypted.png" width="500">
 
 The Payer can now pay you to your private address or ENS 🥳
 
@@ -70,12 +70,13 @@ The Payer can now pay you to your private address or ENS 🥳
 Let's now go through how one can pay privately using NameSys. To begin, enter the ENS of the person you are supposed to be sending private payment to and click on `DECRYPT`.
 
 &nbsp;
-<img src="https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/guide/Decrypt.png" width="400">
+<img src="https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/guide/Decrypt.png" width="500">
 &nbsp;
 
 This will initiate a search for encrypted invoice and if successful, you will see the decrypted invoice in your window. Simply click on `PAY` to pay the invoice to the private address of the Payee 🥳
 
-
+&nbsp;
+<img src="https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/guide/Pay.png" width="500">
 
 ## RELATED GUIDES
 
