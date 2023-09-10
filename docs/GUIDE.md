@@ -1,6 +1,6 @@
 # How to NameSys
 
-### Guide to setting Off-Chain ENS Records on IPFS Network with NameSys
+## Guide to setting Off-Chain ENS Records on IPFS Network with NameSys
 
 ##### author(s) : [`sshmatrix.eth`](@sshmatrix), [`freetib.eth`](@0xc0de4c0ffee)
 
@@ -16,14 +16,14 @@ NameSys Client lets you set Off-Chain Records for your ENS domains. The Client i
 - [`NameSys.eth`](https://namesys.eth.limo)
 - [`CCIP2.eth`](https://ccip2.eth.limo)
 
-## Step 1
+## STEP 1
 
 Connect your Wallet to the Client
 
 &nbsp;
 <img src="https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/guide/Connect.png" width="900">
 
-## Step 2
+## STEP 2
 
 You can now either `Search` for a domain, or go to `MY NAMES` to see all ENS domains in your connected wallet.
 
@@ -42,21 +42,21 @@ You can now either `Search` for a domain, or go to `MY NAMES` to see all ENS dom
 &nbsp;
 <img src="https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/guide/myNames.png" width="600">
 
-## Step 3
+## STEP 3
 
 Choose a domain that you wish to set records for by clicking on `EDIT`. You can only set records for domains that you explicitly **MANAGE** in case of Legacy ENS or **OWN** in case of Wrapped ENS. Upon clicking on `EDIT`, you will see the current records and status of your selected domain in the Preview Panel.
 
 &nbsp;
 <img src="https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/guide/Preview.png" width="500">
 
-## Step 4
+## STEP 4
 
 To start using NameSys, you must migrate from your current Resolver to the NameSys Resolver (officially called `CCIP2.eth:` [`0x839B3B540A9572448FD1B2335e0EB09Ac1A02885`](https://etherscan.io/address/0x839B3B540A9572448FD1B2335e0EB09Ac1A02885). To do so, simply click on `MIGRATE`.
 
 &nbsp;
 <img src="https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/guide/Migrate.png" width="500">
 
-### Step 4a
+### STEP 4a
 
 You will next see a panel with three choices. These choices represent the kind of decentralised or centralised storage that your records will use. This choice will be set on-chain with a transaction in the next step.
 
@@ -72,7 +72,7 @@ You will next see a panel with three choices. These choices represent the kind o
 
 **NOTE:** Ownerhash option will be disabled at the start for all users since no such Ownerhash will be set at the beginning. Ownerhash can be set for your wallet in `UTILS` tab and the steps for it are explained at the end of this document. Let's pretend for now that the user chooses the only available option of `RECORDHASH`.
 
-### Step 4b
+### STEP 4b
 
 Upon clicking `RECORDHASH`:
 
@@ -105,9 +105,9 @@ Confirmtion of `TXN 2` completes the setup process and you are now ready to use 
 &nbsp;
 <img src="https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/guide/Success.png" width="500">
 
-## Step 5
+## STEP 5
 
-We had assumed earlier that the user chose the `RECORDHASH` option in **Step 4a**. If a user (degen) has many names in their wallet, they may prefer the cheaper and global `OWNERHASH` option for multiple domains in their wallet. Let's set the `OWNERHASH` option now. To do this, head over to the `UTILS` tab under `MY NAMES`.
+We had assumed earlier that the user chose the `RECORDHASH` option in **STEP 4a**. If a user (degen) has many names in their wallet, they may prefer the cheaper and global `OWNERHASH` option for multiple domains in their wallet. Let's set the `OWNERHASH` option now. To do this, head over to the `UTILS` tab under `MY NAMES`.
 
 &nbsp;
 <img src="https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/guide/Ownerhash.png" width="400">
@@ -123,7 +123,7 @@ Here you can set the `OWNERHASH` option by clicking on `SET`. The procedure for 
 
 > Note 2: It is advised to update records on IPNS no more than once per hour to ensure proper record propagation on the IPFS network. NameSys Client enforces this approximate limit.
 
-## Step 6
+## STEP 6
 
 Let's now finally set those damn records! Open the Preview Panel again for domain that is already set up. Irrespective of whether the selected domain has either a Recordhash or the global Ownerhash, you will find the record fields activated. Simply enter the valid values for the records and click on `EDIT`. You may set multiple records simultaneously by clicking any one of the active `EDIT` buttons.
 
@@ -155,7 +155,11 @@ Upon approving `SIGN 3`, your records will be signed by the ephemeral Signer and
 
 Congratulations of setting off-chain and secure records on IPFS for your ENS name! 🥳
 
-## More Resources
+## RELATED GUIDES
+
+[`GUIDE:: STEALTH PAYMENTS`](https://github.com/namesys-eth/ccip2-eth-resources/blob/main/docs/STEALTH.md)
+
+## MORE RESOURCES
 
 [`SUMMARY`](https://github.com/namesys-eth/ccip2-eth-resources/blob/main/docs/EASYREAD.md)
 
