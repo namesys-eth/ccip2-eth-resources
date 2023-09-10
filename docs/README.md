@@ -46,6 +46,13 @@ For this specification to make pratical sense, we expect the `contenhash` to be 
 { data: abi.encode(<address/60>) }
 ```
 
+### Stealth Payments
+
+With the ability to update ENS records infinitely with NameSys, two parties can interact in an **encrypted** manner using their respective `RSA` (`2048 BITS`) public key records. For example, if Bob wants Alice to pay an `INVOICE` (to one of Bob's private addresses), he can encrypt the invoice with Alice's `RSA` public key and post the resulting `STEALTH` cipher as a record. Alice can then read this encrypted record, decrypt its contents with her private `RSA` key and pay the resulting `INVOICE`.
+
+&nbsp;
+![](https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/png/stealth.png)
+
 ### Security
 
 To ensure secure record resolution, records must be signed by a domain-specific signer (called `approvedSigner`) set by the manager of a legacy ENS or the owner of a wrapped ENS. The `approvedSigner` may be stored on-chain or off-chain by the manager (of a legacy ENS) or the owner (of a wrapped ENS) in the CCIP2 contract. Upon each resolution, CCIP2 resolver verifies the signature against on-chain and/or off-chain `approvedSigner`, aka on-chain signer and/or off-chain signer approved by the manager/owner of the legacy/wrapped (sub)domain.

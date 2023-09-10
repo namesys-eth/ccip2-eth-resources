@@ -10,8 +10,9 @@ With the ability to update ENS records infinitely with NameSys, two parties can 
 
 To use stealth payments via NameSys, users must set their `RSA` public key as an ENS Text Record. User's private key will be generated in-app using their deterministic wallet signature and then purged after the decryption process; this follows the standard NameSys protocol for handling keypairs. Please read the [main guide](https://github.com/namesys-eth/ccip2-eth-resources/blob/main/docs/GUIDE.md) before proceeding further.
 
+
 &nbsp;
-![](https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/png/stealth.png)
+<img src="https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/png/stealth.png" width="700">
 
 ### Signature
 
@@ -44,7 +45,7 @@ Upon completing this, you will see your `RSA` records set with a value; this val
 
 Once your RSA key is set, you are ready to send and receive stealth payments.
 
-### STEP 3a: RECEIVING STEALTH PAYMENETS
+### STEP 3a: RECEIVING STEALTH PAYMENTS
 
 Click on `SET` in the `STEALTH` field.
 
@@ -55,7 +56,7 @@ Click on `SET` in the `STEALTH` field.
 This will open the password modal as usual followed by the Invoice modal where can set the Payer, your private address or private ENS and the amount to receive.
 
 &nbsp;
-<img src="https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/guide/Invoice.png" width="500">
+<img src="https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/guide/Invoice.png" width="400">
 &nbsp;
 
 Fill in the values of your choice and complete the process with signatures. Once your are finished, your encrypted invoice will appear in the `STEALTH` field
@@ -65,7 +66,7 @@ Fill in the values of your choice and complete the process with signatures. Once
 
 The Payer can now pay you to your private address or ENS 🥳
 
-### STEP 3b: SENDING STEALTH PAYMENETS
+### STEP 3b: SENDING STEALTH PAYMENTS
 
 Let's now go through how one can pay privately using NameSys. To begin, enter the ENS of the person you are supposed to be sending private payment to and click on `DECRYPT`.
 
