@@ -35,7 +35,7 @@ Find your way to the Stealth Records button. This button will be active only aft
 You'll arrive at the Stealth modal where you'll be able to set your stealth records. To use stealth features, you must set the RSA public key. Click on `SET` to start this process.
 
 &nbsp;
-<img src="https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/guide/editRSA.png" width="400">
+<img src="https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/guide/editRSA.png" width="500">
 &nbsp;
 
 Upon completing this, you will see your `RSA` records set with a value; this value is your RSA public key that the Payer(s) need to send you money privately.
@@ -44,7 +44,7 @@ Upon completing this, you will see your `RSA` records set with a value; this val
 
 Once your RSA key is set, you are ready to send and receive stealth payments.
 
-## STEP 3a: RECEIVING STEALTH PAYMENETS
+### STEP 3a: RECEIVING STEALTH PAYMENETS
 
 Click on `SET` in the `STEALTH` field.
 
@@ -55,7 +55,7 @@ Click on `SET` in the `STEALTH` field.
 This will open the password modal as usual followed by the Invoice modal where can set the Payer, your private address or private ENS and the amount to receive.
 
 &nbsp;
-<img src="https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/guide/Invoice.png" width="400">
+<img src="https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/guide/Invoice.png" width="500">
 &nbsp;
 
 Fill in the values of your choice and complete the process with signatures. Once your are finished, your encrypted invoice will appear in the `STEALTH` field
@@ -65,7 +65,7 @@ Fill in the values of your choice and complete the process with signatures. Once
 
 The Payer can now pay you to your private address or ENS 🥳
 
-## STEP 3a: SENDING STEALTH PAYMENETS
+### STEP 3b: SENDING STEALTH PAYMENETS
 
 Let's now go through how one can pay privately using NameSys. To begin, enter the ENS of the person you are supposed to be sending private payment to and click on `DECRYPT`.
 
