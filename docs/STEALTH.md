@@ -55,6 +55,17 @@ Click on `SET` in the `STEALTH` field.
 
 This will open the password modal as usual followed by the Invoice modal where can set the Payer, your private address or private ENS and the amount to receive.
 
+#### `INVOICE`
+
+```json
+{
+     "payer": "nick.eth",
+     "payee": "vitalik.eth",
+    "amount": "0.420",
+  "extrdata": "bla1234"
+}
+```
+
 &nbsp;
 <img src="https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/guide/Invoice.png" width="400">
 &nbsp;
@@ -66,7 +77,7 @@ Fill in the values of your choice and complete the process with signatures. Once
 
 The Payer can now pay you to your private address or ENS 🥳
 
-> Note that the Payee did not require their own `RSA` key to receive the payment. Like previously mentioned, only the Payer needs their `RSA` public key set as a Record to make the private payment.
+> Note that the Payee did not require their own `RSA` key to receive the payment. Like previously mentioned, only the Payer needs their `RSA` public key set as a record to make the private payment.
 
 ### STEP 3b: SENDING STEALTH PAYMENTS
 
