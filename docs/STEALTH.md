@@ -22,6 +22,18 @@ To use stealth payments via NameSys, users must set their `RSA` public key as an
 Requesting Signature To Generate RSA Key\n\nOrigin: ${ORIGIN}\nKey Type: RSA-2048\nExtradata: ${EXTRADATA}\nSigned By: ${CAIP10}
 ```
 
+### Invoice
+
+```js
+let INVOICE = {
+                    "payer": "nick.eth",
+                    "payee": "vitalik.eth",
+                   "amount": "0.420",
+                "extradata": "bla1234", // Optional in v1.1-beta
+                "signature": "0x2a4e...9ac6" // Optional in v1.1-beta
+              }
+```
+
 ## GUIDE
 
 ### STEP 1
@@ -54,18 +66,6 @@ Click on `SET` in the `STEALTH` field.
 &nbsp;
 
 This will open the password modal as usual followed by the Invoice modal where can set the Payer, your private address or private ENS and the amount to receive. In the future versions, we will enable adding customisable fields to the invoice object.
-
-#### `INVOICE`
-
-```json
-{
-      "payer": "nick.eth",
-      "payee": "vitalik.eth",
-     "amount": "0.420",
-  "extradata": "bla1234", // Optional in v1.1-beta
-  "signature": "0x2a4e...9ac6" // Optional in v1.1-beta
-}
-```
 
 &nbsp;
 <img src="https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/guide/Invoice.png" width="400">
