@@ -33,7 +33,7 @@ Find your way to the Stealth Records button. This button will be active only aft
 
 ### STEP 2
 
-You'll arrive at the Stealth modal where you'll be able to set your stealth records. To use stealth features, you must set the RSA public key. Click on `SET` to start this process.
+You'll arrive at the Stealth modal where you'll be able to set your stealth records. To use stealth features, it is advisable to set the RSA public key. In strict sense, you only need to set this record if you intend to **send** a private payment; receving private payments doesn't require this record. To set the RSA public key, click on `SET`.
 
 &nbsp;
 <img src="https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/guide/editRSA.png" width="500">
@@ -43,7 +43,7 @@ Upon completing this, you will see your `RSA` records set with a value; this val
 
 ### STEP 3
 
-Once your RSA key is set, you are ready to send and receive stealth payments.
+Once your RSA key is set, you are ready to receive as well as send stealth payments.
 
 ### STEP 3a: RECEIVING STEALTH PAYMENTS
 
@@ -65,6 +65,8 @@ Fill in the values of your choice and complete the process with signatures. Once
 <img src="https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/guide/Encrypted.png" width="500">
 
 The Payer can now pay you to your private address or ENS 🥳
+
+> Note that the Payee did not require their own `RSA` key to receive the payment. Like previously mentioned, only the Payer needs their `RSA` public key set as a Record to make the private payment.
 
 ### STEP 3b: SENDING STEALTH PAYMENTS
 
