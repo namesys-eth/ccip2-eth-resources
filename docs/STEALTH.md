@@ -53,16 +53,17 @@ Click on `SET` in the `STEALTH` field.
 <img src="https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/guide/RSA.png" width="500">
 &nbsp;
 
-This will open the password modal as usual followed by the Invoice modal where can set the Payer, your private address or private ENS and the amount to receive.
+This will open the password modal as usual followed by the Invoice modal where can set the Payer, your private address or private ENS and the amount to receive. In the future versions, we will enable adding customisable fields to the invoice object.
 
 #### `INVOICE`
 
 ```json
 {
-     "payer": "nick.eth",
-     "payee": "vitalik.eth",
-    "amount": "0.420",
-  "extrdata": "bla1234"
+      "payer": "nick.eth",
+      "payee": "vitalik.eth",
+     "amount": "0.420",
+  "extradata": "bla1234", // Optional in v1.1-beta
+  "signature": "0x2a4e...9ac6" // Optional in v1.1-beta
 }
 ```
 
