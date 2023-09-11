@@ -50,6 +50,18 @@ For this specification to make pratical sense, we expect the `contenhash` to be 
 
 With the ability to update ENS records infinitely with NameSys, two parties can interact in an **encrypted** manner using their respective `RSA` (`2048 BITS`) public key records. For example, if Bob wants Alice to pay an `INVOICE` (to one of Bob's private addresses), he can encrypt the invoice with Alice's `RSA` public key and post the resulting `STEALTH` cipher as a record. Alice can then read this encrypted record, decrypt its contents with her private `RSA` key and pay the resulting `INVOICE`.
 
+#### `INVOICE`
+
+```js
+let INVOICE = {
+                    "payer": "nick.eth",
+                    "payee": "vitalik.eth",
+                   "amount": "0.420",
+                "extradata": "bla1234", // Optional in v1.1-beta
+                "signature": "0x2a4e...9ac6" // Optional in v1.1-beta
+              }
+```
+
 &nbsp;
 ![](https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/png/stealth.png)
 
