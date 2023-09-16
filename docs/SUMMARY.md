@@ -1,4 +1,7 @@
+# [NameSys](https://namesys.xyz)
+
 ![](https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/png/banner.png)
+&nbsp;
 
 [NameSys.eth](https://namesys.xyz) is introducing an innovative solution for Ethereum Name Service (ENS) users to store their ENS records off-chain in a **gasless**, **secure** and **autonomous** manner. By combining IPNS and CCIP-Read, NameSys allows users to enjoy free and secure ENS record updates. This unique approach addresses the long-standing issue of high gas costs associated with on-chain updates, making it accessible to ENS enthusiasts of all levels. NameSys is also accessible via faster HTTP gateways for users who prefer speed over decentralised security of IPFS. Due to its gasless nature, NameSys allows builders to develop features previously thought impossible or unfeasible. One of these features is the no-cost & no-logs **private/stealth payments to ENS domains** via NameSys!
 
