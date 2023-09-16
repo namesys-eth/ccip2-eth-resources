@@ -229,8 +229,6 @@ Requesting Signature To Update ENS Record\n\nOrigin: ${ENS}\nRecord Type: ${RECO
 Requesting Signature To Install dApp Service\n\nOrigin: ${ENS}\nApp: ${DAPP}\nExtradata: ${_EXTRADATA_}\nSigned By: ${CAIP10}
 ```
 
-# &nbsp;
-
 ### `SIGN 6`:
 
 - Signed by `WALLET` to generate RSA Keypair
