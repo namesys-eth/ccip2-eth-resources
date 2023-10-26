@@ -6,7 +6,7 @@
 | -- | -- |
 | **Author**    | [freetib.eth](@0xc0de4c0ffee), [sshmatrix.eth](@sshmatrix) |
 | **Status**    | Draft |
-| **Submitted** | 2023-00-00 |
+| **Submitted** | `2023-69-42` |
 
 ### Abstract
 
@@ -14,7 +14,7 @@ This ENSIP introduces DataURI format in Contenthash field (ENSIP-07) for compati
 
 ## Motivation
 
-ENS `contenthash` (ENSIP-07) currently enables linking to static content which is strictly off-chain. The off-chain content is entirely dependent on off-chain providers, and updating this content for ENS-based decentralised websites typically requires updating the on-chain `contenthash` explicitly (except for IPNS). ENS domains' `avatar` text records and their ERC-721/-1155 interfaces already support generated DataURI bytes (`data:uri`) to resolve JSON and image metadata. This specification enables a similar `data:uri` format in ENS `contenthash` field, allowing ENS Resolvers to fetch and serve on-chain and/or off-chain data. The off-chain resources for the `data:uri` content may use CCIP-Read and an appropriate `utf-8` decoder to render the encoded bytes.
+ENS `contenthash` (ENSIP-07) currently enables linking to static content which is strictly off-chain. The off-chain content is entirely dependent on off-chain providers, and updating this content for ENS-based decentralised websites typically requires updating the on-chain `contenthash` explicitly (except for IPNS). ENS domains' `avatar` text records and their ERC-721/-1155 interfaces already support generated DataURI bytes (`data:uri`) to resolve JSON and image metadata. This specification enables a similar `data:uri` format in ENS `contenthash` field, allowing ENS Resolvers to fetch and serve on-chain and/or off-chain data. The off-chain resources for the DataURI content may use CCIP-Read and an appropriate `utf-8` decoder to render the encoded bytes.
 
 ## Specification
 
