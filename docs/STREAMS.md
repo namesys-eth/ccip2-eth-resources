@@ -12,7 +12,7 @@
 
 ### WHAT DO YOU WANT TO BUILD ON ENS?
 
-NameSys is a Research & Development Cooperative dedicated to creating cost-efficient, open-source and accessible cryptonative products helping scale ENS adoption through immediate and tangible benefits to end users. High gas fees have been a burden on the accessibility of Ethereum and ENS for a while now. NameSys attempts to resolve these gas issues by developing secure off-chain infrastructures that can replace some of the on-chain functionailties of ENS domains, in particular the Resolver. This on-chain to off-chain offloading has massive impact on the overall gas overhead for managing and truly utilising an ENS name. [CCIP-Read](https://eips.ethereum.org/EIPS/eip-3668) (EIP-3668) and [ENS Wildcard Resolution](https://docs.ens.domains/ens-improvement-proposals/ensip-10-wildcard-resolution) (ENSIP-10) form the backbone of most of the NameSys infrastructure.
+NameSys is a Research & Development Cooperative dedicated to creating cost-efficient, open-source and accessible cryptonative products, helping scale ENS adoption through immediate and tangible benefits to end users. High gas fees have been a burden on the accessibility of Ethereum and ENS for a while now. NameSys attempts to resolve these gas issues by developing secure off-chain infrastructures that can replace some of the on-chain functionailties of ENS domains, in particular the Resolver. This on-chain to off-chain offloading has massive impact on the overall gas overhead for managing and truly utilising an ENS name. [CCIP-Read](https://eips.ethereum.org/EIPS/eip-3668) (EIP-3668) and [ENS Wildcard Resolution](https://docs.ens.domains/ens-improvement-proposals/ensip-10-wildcard-resolution) (ENSIP-10) form the backbone of most of the NameSys infrastructure.
 
 The on-chain to off-chain offloading of the Resolver has several beneficial features other than the cost efficiency. For instance, no-cost dynamic off-chain content can now be injected in ENS Records to replace the static and expensive on-chain content. This feature is most impactful in the [ENS Contenthash Field](https://docs.ens.domains/ens-improvement-proposals/ensip-7-contenthash-field) (ENSIP-07) responsible for decentralised web content. NameSys infrastructure makes it possible to render dynamic web-content in Contenthash at zero cost! This development has the potential to drastically expand the usecases emerging from ENS Contenthash.
 
@@ -49,7 +49,7 @@ Our approximate projected development path consists of the following throughout 
 > † not covered by this stream
 
 ### PAST EXPERIENCE WORKING ON ENS
-The team behind NameSys has been part of the Ethereum & ENS ecosystem for several years, and have already built useful infrastructure benefitting ENS, Ethereum and in some cases even generic crypto users. While NameSys is mostly known for a Off-Chain Records, the time behind it has created an array of protocols and products in the past. Here goes:
+The team behind NameSys has been part of the Ethereum & ENS ecosystem for several years, and have already built useful infrastructure benefitting ENS, Ethereum and in some cases even generic crypto users. While NameSys is mostly known for its Off-Chain Records infrastructure, the team behind it has created an array of protocols and products in the past. Here goes:
 
 #### `NameSys.eth` Stack
 ENS Off-Chain Records Manager stack (Web Client + Support Services) with support for web3 IPFS and traditional web2 server for storage. Web Client can be accessed [here](https://namesys.xyz).
@@ -95,3 +95,6 @@ NameSys received `$10,000 USD` through a systematic grant from ENS DAO Ecosystem
 
 ### BUGDET REQUESTED:
 Minimum ticksize `$100,000 USD`
+
+### DISCLAIMER:
+Open grants are the sole source of revenue for NameSys and all related or unrelated development work.
