@@ -15,4 +15,17 @@ The NameSys process involves a one-time initial setup, where users set their res
 
 Users additionally have the option to export their IPNS private key and IPFS hash for re-use with other pinning services such as Pinata, Fleek etc. Users at their own discretion may also choose the HTTP gateway option which eliminates the need for IPFS altogether. NameSys platform's exciting features, such as stealth payments and programmable addresses, open up new possibilities for users. With add-ons such as wallet-specific records and on-chain signers for extra security, NameSys infrastructure is near **zero-cost** and yet **highly secure**.
 
-Overall, NameSys.eth provides a game-changing solution for ENS users, enabling **free and secure off-chain record management**. With its focus on security, autonomy and dynamic possibilities, NameSys aims to transform the ENS community's experience, making free and secure records forever accessible to all users. We at NameSys are dedicated to proactively adding more utility to ENS domains and transform it into a barrier-free global Layer 1 namespace!
+Overall, NameSys.eth provides a game-changing solution for ENS users, enabling **free and secure off-chain record management**. With its focus on security, autonomy and dynamic possibilities, NameSys aims to transform the ENS community's experience, making free and secure records forever accessible to all users!
+
+# Recent Developments
+
+## `w3name` by NameSys
+NameSys will undergo a minor version bump from `v1.1-beta` to `v1.2` in December 2023! In this upgrade, NameSys will deploy its own ENS-dedicated `w3name` API and IPNS Publishing Service to Cloudflare and integrate it with the NameSys Client. This upgrade is under final testing and is expected to come online by December 10, 2023.
+
+## `dAppSys.eth` : dApp Store for ENS Domains 
+NameSys's Off-Chain infrastructure can be bootstrapped to provide a dApp Store-like feature where users can 'install' a dApp by posting a signed ENS Record, and then access the installed dApp at `dapp.domain.eth`. On-chain codebase for this feature is already deployed in [`CCIP2.eth` `v1`](https://etherscan.io/address/0x839b3b540a9572448fd1b2335e0eb09ac1a02885). Development work is underway to implement this feature in NameSys Client.
+
+## `notAPI.eth` : Web3 On-Chain JSON API 
+Work [is in progress](https://github.com/namesys-eth/notapi-eth) on a Serverless GET-Only API using ENS Wildcard Resolution that returns JSON responses to queries formatted as subdomains, e.g. `https://erc20.dai.balanceof.<0xaddress>.notapi.eth.limo` shall return the DAI (ERC20) balance of an arbitrary `<0xaddress>`.
+
+## We at [NameSys](https://namesys.xyz) are dedicated to proactively adding more utility to ENS domains and transform it into a barrier-free global Layer 1 namespace!

@@ -48,13 +48,13 @@ Our approximate projected development path consists of the following throughout 
 ![](https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/png/infraStack.png)
 
 #### OTHER SIDE PROJECTS
-- ENS + Bitcoin Lightning Compatibility
+- ENS & Bitcoin Lightning Compatibility
 - IPLD Integration in ENS Contenthash and other relevant fields
 
 #### †FUTURISTIC STUFF
 - ZK Proofs as ENS Records
 - Off-Chain 2PC and MPC using ENS
-- ENS + Secure NFC Hardware Stack for RWA
+- ENS & Secure NFC Hardware Stack for RWA
 
 > † not covered by this stream
 
