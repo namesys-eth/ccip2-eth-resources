@@ -28,7 +28,7 @@ Our approximate projected development path consists of the following throughout 
 
 - **`dAppSys.eth` :** dApp Store for ENS Domains 
 
-   NameSys's Off-Chain infrastructure can be bootstrapped to provide a dApp Store-like feature where users can 'install' a dApp by posting a signed ENS Record, and then access the installed dApp at `dapp.domain.eth`.
+   NameSys's Off-Chain infrastructure can be bootstrapped to provide a dApp Store-like feature where users can 'install' a dApp by posting a signed ENS Record, and then access the installed dApp at `dapp.domain.eth`. On-chain codebase for this feature is already deployed in [`CCIP2.eth` `v1`](https://etherscan.io/address/0x839b3b540a9572448fd1b2335e0eb09ac1a02885).
 
 - **`notAPI.eth` :** Serverless GET-Only JSON API using ENS Wildcard Resolution & On-Chain Data. 
 
@@ -36,14 +36,14 @@ Our approximate projected development path consists of the following throughout 
 
 - **`htmx3.eth` :** On-Chain HTMX Generator using ENS Wildcard Resolution and On-Chain Data.
 
-   HTMX Generator contract forms the infrastructural core to rendering dynamic dwebsite content in ENS Contanthash in `data:uri` format using only on-chain data.
+   HTMX Generator contract forms the infrastructural core to rendering dynamic dwebsite content in ENS Contanthash in `data:uri` format using only on-chain data. Prototype is available [here](https://github.com/namesys-eth/datauri-eth-resolver).
 
 - **`namesys.js` :** Open-Source Library for implementing NameSys Infrastructure. 
 
    End-to-end library to simplify native integration of NameSys infrastructure into marketplace clients, registrars and domain managers.
 
 #### IPFS + ENS SERVICES
-- **`ipns.eth` :** Public free-to-use IPFS + IPNS Hosting, Publishing and Pinning Service with Keyless Record Management for ENS Domains. This service will be developed with the ability to sync to IPFS Network and/or L2 Events or Data.
+- **`ipns.eth` :** Public free-to-use IPFS & IPNS Hosting, Publishing and Pinning Service with Keyless Record Management for ENS Domains. To this effect, NameSys has deployed its own `w3name` API and re-publisher service on Cloudflare for IPNS (re)broadcasting. This service will be developed with the ability to sync to IPFS Network and/or L2 Events or Data. 
 
 ![](https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/png/infraStack.png)
 
