@@ -1,4 +1,4 @@
-# ENSIP-17: DataURI Format in Contenthash
+# ENSIP-XX: DataURI Format in Contenthash
 
 ### RFC-2397 Compliant DataURI Format in Contenthash
 

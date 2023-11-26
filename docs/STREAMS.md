@@ -1,6 +1,8 @@
 # [NameSys](https://namesys.xyz)
 
-> This skeleton draft is work in progress and will be updated with details
+![](https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/png/banner.png)
+
+> Draft may undergo minor edits until December 1, 2023
 
 ### NAME AND WEBSITE:
 
@@ -22,20 +24,28 @@ Our approximate projected development path consists of the following throughout 
 
 - **`NameSys.eth` :** ENS Off-Chain Records Manager
    
-   Off-Chain Records are NameSys's core premise. NameSys's Record Manager infrastructure (including the on-chain Resolver) could be much more efficient and upgradeable than what it currently is. 
+   Off-Chain Records are NameSys's core premise. NameSys's Record Manager infrastructure (including the on-chain Resolver) could be much more efficient and upgradeable than its current form. In particular, work is well underway for a permanent migration to Universal `v2` Resolver employing carbon-wrapping (EIP-2535) and proxying for upgradeability. 
 
 - **`dAppSys.eth` :** dApp Store for ENS Domains 
 
    NameSys's Off-Chain infrastructure can be bootstrapped to provide a dApp Store-like feature where users can 'install' a dApp by posting a signed ENS Record, and then access the installed dApp at `dapp.domain.eth`.
 
-- **`notAPI.eth` :** Serverless GET-Only Web3 JSON API using ENS Wildcard Resolution and On-Chain Data 
+- **`notAPI.eth` :** Serverless GET-Only JSON API using ENS Wildcard Resolution & On-Chain Data. 
 
-- **`htmx3.eth` :** On-Chain HTMX Generator using ENS Wildcard Resolution and On-Chain Data
+   Work [is in progress](https://github.com/namesys-eth/notapi-eth) on a fully on-chain API (a contract) that returns JSON responses to queries formatted as subdomains, e.g. `https://erc20.dai.balanceof.<0xaddress>.notapi.eth.limo` shall return the DAI (ERC20) balance of an arbitrary `<0xaddress>`.
 
-- **`namesys.js` :** Open-Source Library for implementing NameSys Infrastructure
+- **`htmx3.eth` :** On-Chain HTMX Generator using ENS Wildcard Resolution and On-Chain Data.
 
-#### IPNS PUBLISHER SERVICE
-- **IPNS CID Hosting:** Public free-to-use IPNS Publishing and Pinning Service with Keyless Record Management. This service can be synced to IPFS Network and/or L2 Events or Data
+   HTMX Generator contract forms the infrastructural core to rendering dynamic dwebsite content in ENS Contanthash in `data:uri` format using only on-chain data.
+
+- **`namesys.js` :** Open-Source Library for implementing NameSys Infrastructure. 
+
+   End-to-end library to simplify native integration of NameSys infrastructure into marketplace clients, registrars and domain managers.
+
+#### IPFS + ENS SERVICES
+- **`ipns.eth` :** Public free-to-use IPFS + IPNS Hosting, Publishing and Pinning Service with Keyless Record Management for ENS Domains. This service will be developed with the ability to sync to IPFS Network and/or L2 Events or Data.
+
+![](https://raw.githubusercontent.com/namesys-eth/ccip2-eth-resources/main/graphics/png/infraStack.png)
 
 #### OTHER SIDE PROJECTS
 - ENS + Bitcoin Lightning Compatibility
@@ -88,7 +98,8 @@ Contributed IPNS `base36` CID Support in [`paulmillr/ed25519-keygen`](https://gi
 **TWITTER/X:** [`x.com/namesys_eth`](https://x.com/namesys_eth)
 
 ### CONFLICT OF INTEREST STATEMENT:
-NameSys received `$10,000 USD` through a systematic grant from ENS DAO Ecosystem WG
+- NameSys received `$10,000 USD` through a systematic grant from ENS DAO Ecosystem WG
+- NameSys received `0.7 ETH` through Small Grants Ecosystem WG Round 10
 
 ### 10k ENDORSEMENT LINK:
 [`https://snapshot.org/#/nominations.ens.eth/proposal/0x64fbc81a7ab8b57deea798df03141fa1b7d1f2fce6f1051b580e568ca89e8070`](https://snapshot.org/#/nominations.ens.eth/proposal/0x64fbc81a7ab8b57deea798df03141fa1b7d1f2fce6f1051b580e568ca89e8070)
